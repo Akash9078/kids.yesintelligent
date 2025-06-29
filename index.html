@@ -85,10 +85,13 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
                 justify-items: center;
+                align-items: center;
             }
             .parents-reviews-img {
                 max-width: 320px;
                 width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         @media (max-width: 639px) {
@@ -97,10 +100,23 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
                 justify-items: center;
+                align-items: center;
             }
             .parents-reviews-img {
                 max-width: 90vw;
                 width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media (min-width: 1024px) {
+            .parents-reviews-grid {
+                justify-items: center;
+                align-items: center;
+            }
+            .parents-reviews-img {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     </style>
