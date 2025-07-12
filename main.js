@@ -55,10 +55,70 @@ const initLazyLoading = () => {
     }
 };
 
+// Function to highlight content based on selected age group
+function highlightAge(ageGroup) {
+    // Remove active state from all buttons
+    document.querySelectorAll('[onclick^="highlightAge"]').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-offset-2');
+    });
+
+    // Add active state to clicked button
+    event.target.classList.add('ring-2', 'ring-offset-2');
+
+    // Scroll to relevant bundle based on age
+    let targetSection;
+    switch(ageGroup) {
+        case '2-4':
+            targetSection = 'Preschool Power Pack';
+            break;
+        case '5-7':
+            targetSection = 'Creative Genius Kit';
+            break;
+        case '8+':
+            targetSection = 'Little Scholar Set';
+            break;
+    }
+
+    // Find and scroll to the relevant section
+    const bundle = Array.from(document.getElementsByTagName('h3')).find(h => h.textContent.includes(targetSection));
+    if (bundle) {
+        bundle.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Highlight the bundle temporarily
+        bundle.closest('div').classList.add('ring-4', 'ring-offset-4', 'ring-blue-500');
+        setTimeout(() => {
+            bundle.closest('div').classList.remove('ring-4', 'ring-offset-4', 'ring-blue-500');
+        }, 2000);
+    }
+}
+
+// Initialize scroll animations
+const initScrollAnimations = () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Observe all sections with motion-fade class
+    document.querySelectorAll('.motion-fade').forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
+};
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     measurePerformance('init', () => {
         initLazyLoading();
         initDownloadButtons();
+        initScrollAnimations();
     });
 });
