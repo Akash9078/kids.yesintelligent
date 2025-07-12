@@ -1,74 +1,64 @@
-// Debounce function for performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+// Simple performance monitoring
+const measurePerformance = (label, fn) => {
+    performance.mark(`${label}-start`);
+    fn();
+    performance.mark(`${label}-end`);
+    performance.measure(label, `${label}-start`, `${label}-end`);
+};
 
-// Intersection Observer for better performance
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const el = entry.target;
-            const isAboveTheFold = el.getBoundingClientRect().top < window.innerHeight;
-            
-            el.classList.add('visible');
-            if (isAboveTheFold) {
-                el.classList.add('no-animation');
-            }
-            
-            observer.unobserve(el); // Stop observing once animated
-        }
+// Download button animation
+const initDownloadButtons = () => {
+    const buttons = document.querySelectorAll('.download-button');
+    
+    buttons.forEach(button => {
+        // Add click animation
+        button.addEventListener('click', () => {
+            button.classList.remove('animate');
+            void button.offsetWidth; // Trigger reflow
+            button.classList.add('animate');
+        });
+        
+        // Initial attention-grabbing animation
+        setTimeout(() => {
+            button.classList.add('animate');
+            // Remove the class after animation completes
+            button.addEventListener('animationend', () => {
+                button.classList.remove('animate');
+            }, { once: true });
+        }, 1000);
     });
 };
 
-// Initialize observer
-const observer = new IntersectionObserver(observerCallback, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-});
-
-// Initialize animations
-function initAnimations() {
-    const elements = document.querySelectorAll('.motion-fade, .motion-pop');
-    elements.forEach(el => observer.observe(el));
-    
-    // Immediate load for above-fold content
-    elements.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight) {
-            el.classList.add('visible', 'no-animation');
-        }
+// Image loading handler
+const handleImageLoading = (img) => {
+    img.addEventListener('load', () => img.classList.add('loaded'));
+    img.addEventListener('error', () => {
+        console.warn(`Failed to load image: ${img.src}`);
+        img.src = '/img/fallback.webp';  // Using a real fallback image path
     });
-}
+};
 
-// Handle resize events efficiently
-const handleResize = debounce(() => {
-    document.querySelectorAll('.motion-fade, .motion-pop').forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight) {
-            el.classList.add('visible', 'no-animation');
-        }
-    });
-}, 150);
-
-// Event listeners
-window.addEventListener('DOMContentLoaded', () => {
-    initAnimations();
-
-    // Add lazy loading to images
+// Initialize lazy loading
+const initLazyLoading = () => {
     const images = document.querySelectorAll('img[loading="lazy"]');
-    if ('loading' in HTMLImageElement.prototype) {
-        // No need to set img.loading = 'lazy' again, it's already in HTML
-    } else {
-        // Fallback for browsers that don't support lazy loading
+    
+    // Set up image loading handlers
+    images.forEach(handleImageLoading);
+
+    // Add lazysizes fallback if needed
+    if (!('loading' in HTMLImageElement.prototype)) {
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-        document.body.appendChild(script);
+        script.async = true;
+        script.onerror = () => images.forEach(img => img.src = img.dataset.src || img.src);
+        document.head.appendChild(script);
     }
+};
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    measurePerformance('init', () => {
+        initLazyLoading();
+        initDownloadButtons();
+    });
 });
