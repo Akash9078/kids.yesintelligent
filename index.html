@@ -124,16 +124,63 @@
 <body class="antialiased text-gray-800">
 
     <!-- Header Section -->
-    <header class="header-bg py-12 px-4 md:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-red-600 leading-tight mb-4">
-            KEEP YOUR CHILDREN AWAY </br> FROM PHONES AND TV
-        </h1>
-        <img src="/img/Banner-kids-activity-kit.webp" alt="" class="mx-auto my-6 rounded-lg shadow-lg w-full sm:w-4/5 lg:w-3/5" style="max-width:100%; height:auto;">
-        <a href="https://yesintelligent.gumroad.com/l/kids-activity-kit" target="_blank" rel="noopener noreferrer">
-            <button class="download-button">
-                &#8595; DOWNLOAD NOW
+    <header class="header-bg py-12 px-4 md:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8">
+        <!-- Left Column: Text and Button -->
+        <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+          <!-- Power Up Button -->
+          <button class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 mb-4 rounded-full bg-blue-100 border border-blue-300 text-blue-900 font-semibold text-sm sm:text-base shadow-sm hover:bg-blue-200 transition-all responsive-powerup-btn" style="outline:none;">
+            <span class="text-yellow-300 text-lg sm:text-xl">&#9889;</span>
+            <span>Kid's Activity Kit</span>
+          </button>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-red-500 leading-tight mb-6 mobile-h1">
+            KEEP YOUR CHILDREN <br>AWAY FROM <br> PHONES AND TV
+          </h1>
+          <a href="https://yesintelligent.gumroad.com/l/kids-activity-kit" target="_blank" rel="noopener noreferrer">
+            <button class="download-button mt-2">
+              &#8595; DOWNLOAD NOW
             </button>
-        </a>
+          </a>
+        </div>
+        <!-- Right Column: Image (moves below on mobile) -->
+        <div class="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0 order-2 md:order-none">
+          <img src="/img/Banner-kids-activity-kit.webp" alt="Kids Activity Kit Banner" class="rounded-lg shadow-lg w-full max-w-xs sm:max-w-md md:max-w-full h-auto object-contain" style="max-width:100%; height:auto;">
+        </div>
+      </div>
+      <style>
+        @media (max-width: 767px) {
+          .mobile-h1 {
+            font-size: 1.25rem !important;
+          }
+          .responsive-powerup-btn {
+            font-size: 0.95rem !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+            gap: 0.5rem !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: center !important;
+          }
+          .responsive-powerup-btn span {
+            font-size: 1.1rem !important;
+            display: inline-flex !important;
+            align-items: center !important;
+          }
+          header .flex {
+            flex-direction: column !important;
+          }
+          header .flex > div:nth-child(2) {
+            order: 2 !important;
+            margin-bottom: 0 !important;
+          }
+          header .flex > div:nth-child(1) {
+            order: 1 !important;
+          }
+        }
+      </style>
     </header>
 
     <!-- Do You Know Section -->
