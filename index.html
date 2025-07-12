@@ -9,182 +9,39 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="https://pub-978fa224b48646b0b99f042a0935693b.r2.dev/talentify.jpg">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: #333;
-            background-color: #f7f7f7;
-        }
-        .header-bg {
-            background-color: #fcebeb; /* Light red/pink background */
-        }
-        .section-bg-dark {
-            background-color: #333333; /* Dark background for 'What You Will Get' */
-        }
-        .download-button {
-            background-color: #ff0000; /* Red button */
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 9999px; /* Fully rounded */
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            box-shadow: 0 4px 14px 0 rgba(255, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-        .download-button:hover {
-            background-color: #cc0000;
-            box-shadow: 0 6px 20px 0 rgba(255, 0, 0, 0.4);
-            transform: translateY(-2px);
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.75rem; /* Rounded corners */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .icon {
-            color: #ff0000; /* Red icon color */
-            font-size: 2.5rem; /* Larger icon size */
-            margin-bottom: 0.75rem;
-        }
-        .feature-list-item::before {
-            content: '✓'; /* Checkmark icon */
-            color: #008000; /* Green checkmark */
-            margin-right: 0.5rem;
-            font-weight: bold;
-        }
-        /* Custom scrollbar for desktop */
-        @media (min-width: 768px) {
-            ::-webkit-scrollbar {
-                width: 8px;
-            }
-            ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 10px;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 10px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
-        }
-        /* Responsive grid for Parents Honest Reviews */
-        @media (min-width: 640px) and (max-width: 1023px) {
-            .parents-reviews-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-                justify-items: center;
-                align-items: center;
-            }
-            .parents-reviews-img {
-                max-width: 320px;
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        @media (max-width: 639px) {
-            .parents-reviews-grid {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                justify-items: center;
-                align-items: center;
-            }
-            .parents-reviews-img {
-                max-width: 90vw;
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-        @media (min-width: 1024px) {
-            .parents-reviews-grid {
-                justify-items: center;
-                align-items: center;
-            }
-            .parents-reviews-img {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-<body class="antialiased text-gray-800">
+<body class="antialiased text-gray-800 gradient-bg">
 
     <!-- Header Section -->
     <header class="header-bg py-12 px-4 md:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8">
+      <div class="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-1" id="headerMotion">
         <!-- Left Column: Text and Button -->
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
           <!-- Power Up Button -->
-          <button class="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 mb-4 rounded-full bg-blue-100 border border-blue-300 text-blue-900 font-semibold text-sm sm:text-base shadow-sm hover:bg-blue-200 transition-all responsive-powerup-btn" style="outline:none;">
-            <span class="text-yellow-300 text-lg sm:text-xl">&#9889;</span>
+          <button class="flex items-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 mb-4 rounded-full bg-gradient-to-r from-yellow-200 via-pink-200 to-blue-200 border border-blue-200 text-blue-900 font-semibold text-base shadow-lg hover:scale-105 hover:from-yellow-100 hover:to-blue-100 transition-all responsive-powerup-btn" style="outline:none;">
+            <span class="text-yellow-400 text-xl sm:text-2xl powerup-spark">&#9889;</span>
             <span>Kid's Activity Kit</span>
           </button>
-          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-red-500 leading-tight mb-6 mobile-h1">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-blue-500 leading-tight mb-6 mobile-h1 drop-shadow-lg">
             KEEP YOUR CHILDREN <br>AWAY FROM <br> PHONES AND TV
           </h1>
           <a href="https://yesintelligent.gumroad.com/l/kids-activity-kit" target="_blank" rel="noopener noreferrer">
-            <button class="download-button mt-2">
+            <button class="download-button mt-2 shadow-xl hover:scale-105 transition-transform bg-gradient-to-r from-red-500 to-pink-500 text-white">
               &#8595; DOWNLOAD NOW
             </button>
           </a>
         </div>
         <!-- Right Column: Image (moves below on mobile) -->
         <div class="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0 order-2 md:order-none">
-          <img src="/img/Banner-kids-activity-kit.webp" alt="Kids Activity Kit Banner" class="rounded-lg shadow-lg w-full max-w-xs sm:max-w-md md:max-w-full h-auto object-contain" style="max-width:100%; height:auto;">
+          <img src="/img/Banner-kids-activity-kit.webp" alt="Kids Activity Kit Banner" class="rounded-3xl shadow-2xl w-full max-w-xs sm:max-w-md md:max-w-full h-auto object-contain motion-pop" id="headerImgMotion" style="max-width:100%; height:auto;">
         </div>
       </div>
-      <style>
-        @media (max-width: 767px) {
-          .mobile-h1 {
-            font-size: 1.25rem !important;
-          }
-          .responsive-powerup-btn {
-            font-size: 0.95rem !important;
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-            padding-top: 0.5rem !important;
-            padding-bottom: 0.5rem !important;
-            gap: 0.5rem !important;
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            justify-content: center !important;
-          }
-          .responsive-powerup-btn span {
-            font-size: 1.1rem !important;
-            display: inline-flex !important;
-            align-items: center !important;
-          }
-          header .flex {
-            flex-direction: column !important;
-          }
-          header .flex > div:nth-child(2) {
-            order: 2 !important;
-            margin-bottom: 0 !important;
-          }
-          header .flex > div:nth-child(1) {
-            order: 1 !important;
-          }
-        }
-      </style>
     </header>
 
     <!-- Do You Know Section -->
-    <section class="py-16 px-4 md:px-8 bg-white">
+    <section class="py-16 px-4 md:px-8 bg-white glass modern-shadow motion-fade" id="doYouKnowMotion">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">DO YOU KNOW?</h2>
         <p class="text-lg text-center max-w-3xl mx-auto mb-12">
             Mobile Phone Addiction Can <span class="font-bold text-red-500">Negatively Impact Children</span> In Various Ways, Including:
@@ -192,37 +49,37 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <!-- Card 1: Physical Health -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">⚕️</div>
                 <h3 class="text-xl font-bold mb-2">Physical Health</h3>
                 <p class="text-gray-600">Eye strain, headaches, neck pain, back pain, and obesity.</p>
             </div>
             <!-- Card 2: Mental Health -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">🧠</div>
                 <h3 class="text-xl font-bold mb-2">Mental Health</h3>
                 <p class="text-gray-600">Depression, Anxiety, OCD, Attention Deficit Disorder, and other mental health issues.</p>
             </div>
             <!-- Card 3: Social Skills -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">🗣️</div>
                 <h3 class="text-xl font-bold mb-2">Social Skills</h3>
                 <p class="text-gray-600">Impaired social skills and slower social development.</p>
             </div>
             <!-- Card 4: Sleep Time -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">😴</div>
                 <h3 class="text-xl font-bold mb-2">Sleep Time</h3>
                 <p class="text-gray-600">Causes reduced sleep quality, insomnia, and sleep deprivation.</p>
             </div>
             <!-- Card 5: Academic Performance -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">📚</div>
                 <h3 class="text-xl font-bold mb-2">Academic Performance</h3>
                 <p class="text-gray-600">Results in poor grades, lower self-esteem, and loss of interest in studies.</p>
             </div>
             <!-- Card 6: Behavioral Problems -->
-            <div class="card">
+            <div class="card glass modern-shadow hover:scale-105 transition-transform duration-300 motion-pop">
                 <div class="icon">😠</div>
                 <h3 class="text-xl font-bold mb-2">Behavioral Problems</h3>
                 <p class="text-gray-600">Compulsive behaviors, hyperactivity, and aggressive behaviors.</p>
@@ -231,7 +88,7 @@
     </section>
 
     <!-- What You Will Get Section -->
-    <section class="section-bg-dark py-16 px-4 md:px-8 text-center text-white">
+    <section class="section-bg-dark py-16 px-4 md:px-8 text-center glass modern-shadow motion-fade" id="solutionMotion">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">WE HAVE BROUGHT A SOLUTION FOR YOU</h2>
         <p class="text-lg md:text-xl max-w-4xl mx-auto mb-12">
             The Kids Activity Kit of <span class="font-bold text-red-400">12000+ Printable Worksheets</span> With Lifetime Access that will keep your kids engaged in a fun way with various activities.
@@ -246,50 +103,50 @@
 
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <!-- Image 1 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-1-1024x1024.webp" alt="Activity Book" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">ACTIVITY BOOK</p>
+                <p class="text-sm font-semibold text-black-200">ACTIVITY BOOK</p>
             </div>
             <!-- Image 2 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-2-1024x1024.webp" alt="Coloring Pages" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">COLORING BOOKS</p>
+                <p class="text-sm font-semibold text-black-200">COLORING BOOKS</p>
             </div>
             <!-- Image 3 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-3-1024x1024.webp" alt="Flashcards" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">FLASHCARDS</p>
+                <p class="text-sm font-semibold text-black-200">FLASHCARDS</p>
             </div>
             <!-- Image 4 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-4-1024x1024.webp" alt="Addition Subtraction" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">ADDITION, SUBTRACTION</p>
+                <p class="text-sm font-semibold text-black-200">ADDITION, SUBTRACTION</p>
             </div>
             <!-- Image 5 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-5-1024x1024.webp" alt="Origami for Kids" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">ORIGAMI FOR KIDS</p>
+                <p class="text-sm font-semibold text-black-200">ORIGAMI FOR KIDS</p>
             </div>
             <!-- Image 6 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-6-1024x1024.webp" alt="Educational Posters" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">WORD SEARCH PUZZLE</p>
+                <p class="text-sm font-semibold text-black-200">WORD SEARCH PUZZLE</p>
             </div>
              <!-- Image 7 -->
-             <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+             <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-7-1024x1024.webp" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">POSITIVE AFFIRMATIONS</p>
+                <p class="text-sm font-semibold text-black-200">POSITIVE AFFIRMATIONS</p>
             </div>
             <!-- Image 8 -->
-            <div class="bg-gray-700 p-3 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-gray-700 bg-opacity-80 p-3 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 glass modern-shadow motion-pop">
                 <img src="img/kids_yesintelligent-8-1024x1024.webp" alt="Learn to Draw" class="rounded-lg w-full h-auto object-cover mb-2">
-                <p class="text-sm font-semibold text-gray-200">LEARN TO WRITE</p>
+                <p class="text-sm font-semibold text-black-200">LEARN TO WRITE</p>
             </div>
         </div>
     </section>
 
     <!-- And Many More Section -->
-    <section class="py-16 px-4 md:px-8 bg-gray-100">
+    <section class="py-16 px-4 md:px-8 bg-gray-100 glass modern-shadow motion-fade" id="manyMoreMotion">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">AND MANY MORE, LIKE</h2>
 
         <div class="flex flex-col lg:flex-row justify-center items-center gap-x-16 gap-y-8 max-w-5xl mx-auto">
@@ -328,26 +185,26 @@
     </section>
 
     <!-- Parents Honest Reviews Section -->
-    <section class="py-16 px-4 md:px-8 bg-white text-center">
+    <section class="py-16 px-4 md:px-8 bg-white text-center glass modern-shadow motion-fade" id="reviewsMotion">
         <h2 class="text-3xl md:text-4xl font-bold mb-12">Parents <span class="text-red-500">Honest Reviews</span></h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 parents-reviews-grid max-w-6xl mx-auto">
             <!-- Review Image 1 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-1.png" alt="Parent Review 1" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-1.png" alt="Parent Review 1" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
             <!-- Review Image 2 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-2.png" alt="Parent Review 2" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-2.png" alt="Parent Review 2" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
             <!-- Review Image 3 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-3.png" alt="Parent Review 3" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-3.png" alt="Parent Review 3" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
             <!-- Review Image 4 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-4.png" alt="Parent Review 4" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-4.png" alt="Parent Review 4" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
             <!-- Review Image 5 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-5.png" alt="Parent Review 4" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-5.png" alt="Parent Review 4" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
             <!-- Review Image 6 -->
-            <img src="img/Kids-Activity-KIt-Parents-Reviews-6.png" alt="Parent Review 4" class="parents-reviews-img rounded-lg shadow-lg">
+            <img src="img/Kids-Activity-KIt-Parents-Reviews-6.png" alt="Parent Review 4" class="parents-reviews-img rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 motion-pop">
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-red-600 py-12 px-4 md:px-8 text-white text-center">
+    <footer class="bg-gradient-to-r from-red-600 py-12 px-4 md:px-8 text-white text-center glass modern-shadow motion-fade" id="footerMotion">
         <nav class="flex flex-wrap justify-center gap-4 text-sm mb-8">
             <a href="privacy.html" class="hover:underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
             <span class="text-gray-300">|</span>
@@ -360,11 +217,12 @@
             <a href="contact.html" class="hover:underline" target="_blank" rel="noopener noreferrer">Contact Us</a>
         </nav>
         <a href="https://yesintelligent.gumroad.com/l/kids-activity-kit" target="_blank" rel="noopener noreferrer">
-            <button class="download-button bg-white text-red-600 hover:bg-gray-100 hover:text-red-700">
+            <button class="download-button bg-gradient-to-r from-white via-pink-100 to-blue-100 text-red-600 hover:scale-105 hover:bg-gray-100 hover:text-red-700 shadow-xl">
                 &#8595; DOWNLOAD NOW
             </button>
         </a>
     </footer>
 
 </body>
+<script src="main.js"></script>
 </html>
