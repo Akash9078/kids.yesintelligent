@@ -374,6 +374,61 @@
             </div>
         </section>
 
+        <!-- Contact Form Section -->
+        <section class="py-16 px-4 md:px-8 text-center glass modern-shadow motion-fade relative overflow-hidden contact-form-bg" 
+                 style="background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="max-w-lg mx-auto bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl p-8 border border-white/20">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Get In Touch</h2>
+                    <p class="text-gray-600">We'd love to hear from you!</p>
+                </div>
+
+                <form id="contactForm" class="space-y-6">
+                    <!-- Name Input -->
+                    <div class="relative">
+                        <input type="text" id="contactName" name="name" required
+                            class="w-full px-4 py-3 bg-blue-50 rounded-xl border border-transparent focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition-colors outline-none"
+                            placeholder="Full Name">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="relative">
+                        <input type="email" id="contactEmail" name="email" required
+                            class="w-full px-4 py-3 bg-blue-50 rounded-xl border border-transparent focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition-colors outline-none"
+                            placeholder="yourmail@gmail.com">
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="relative">
+                        <textarea id="contactMessage" name="message" rows="4" required
+                            class="w-full px-4 py-3 bg-blue-50 rounded-xl border border-transparent focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition-colors outline-none resize-none"
+                            placeholder="Your message"></textarea>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="contactError" class="text-red-500 text-sm text-center hidden">
+                        Failed to submit form. Please try again.
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold py-3 px-6 rounded-xl hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
+                        <span class="inline-flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                            Send Message
+                        </span>
+                    </button>
+
+                    <!-- Privacy Notice -->
+                    <p class="text-center text-sm text-gray-500">
+                        Your information is secure and will never be shared.
+                    </p>
+                </form>
+            </div>
+        </section>
+
         <!-- Footer Section -->
         <footer
             class="bg-gradient-to-r from-indigo-800 to-purple-800 py-12 px-4 md:px-8 text-white text-center glass modern-shadow motion-fade"
