@@ -610,6 +610,62 @@ body {
 }
 
 /* =====================
+   BUTTON TEXT RESPONSIVENESS
+   ===================== */
+
+/* Ensure button text wraps properly on small screens */
+.btn-primary,
+.btn-secondary {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Mobile button text handling */
+@media (max-width: 479px) {
+    .btn-primary,
+    .btn-secondary {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: 1.3;
+        text-align: center;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .btn-large {
+        padding: 0.875rem 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+    .btn-primary,
+    .btn-secondary {
+        white-space: normal;
+        line-height: 1.4;
+    }
+    
+    .btn-large {
+        font-size: 0.95rem;
+        padding: 1rem 1.25rem;
+    }
+}
+
+/* Ensure consistent button behavior across all screen sizes */
+@media (min-width: 641px) {
+    .btn-primary,
+    .btn-secondary {
+        white-space: nowrap;
+    }
+}
+
+/* =====================
    HOVER AND FOCUS STATES
    ===================== */
 
@@ -1773,7 +1829,7 @@ textarea:focus {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     backdrop-filter: blur(10px);
     margin-bottom: 2rem;
 }
@@ -1782,21 +1838,25 @@ textarea:focus {
     color: #e5e7eb;
     font-size: 0.875rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 .footer-cta-stats {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .footer-cta-stat {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     color: #e5e7eb;
     font-weight: 600;
+    text-align: center;
 }
 
 /* Site Footer */
@@ -2675,7 +2735,7 @@ body {
         border-radius: 1.5rem;
     }
     
-    .modal-content-large {
+    .modal-content_large {
         max-width: 700px;
         max-height: 80vh;
         padding: 2.5rem;
@@ -2943,6 +3003,27 @@ body {
         margin-bottom: 2rem;
     }
     
+    .footer-cta-card {
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-cta-card .btn-large {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        white-space: normal;
+        text-align: center;
+        word-break: break-word;
+        min-height: 52px;
+    }
+    
+    .footer-cta-secure {
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+    }
+    
     .footer-cta-stats {
         grid-template-columns: 1fr;
         gap: 0.75rem;
@@ -2954,10 +3035,48 @@ body {
     }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 640px) {
+    .footer-cta-card {
+        padding: 1.5rem;
+    }
+    
+    .footer-cta-card .btn-large {
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        white-space: normal;
+    }
+    
     .footer-cta-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .footer-cta-card {
+        padding: 1.75rem;
+    }
+    
+    .footer-cta-card .btn-large {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+    
+    .footer-cta-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer-cta-card {
+        padding: 2rem;
+    }
+    
+    .footer-cta-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
