@@ -9,7 +9,7 @@ const measurePerformance = (label, fn) => {
 // Download button animation
 const initDownloadButtons = () => {
     const buttons = document.querySelectorAll('.download-button');
-    
+
     buttons.forEach(button => {
         // Add click animation
         button.addEventListener('click', () => {
@@ -17,7 +17,7 @@ const initDownloadButtons = () => {
             void button.offsetWidth; // Trigger reflow
             button.classList.add('animate');
         });
-        
+
         // Initial attention-grabbing animation
         setTimeout(() => {
             button.classList.add('animate');
@@ -41,7 +41,7 @@ const handleImageLoading = (img) => {
 // Initialize lazy loading
 const initLazyLoading = () => {
     const images = document.querySelectorAll('img[loading="lazy"]');
-    
+
     // Set up image loading handlers
     images.forEach(handleImageLoading);
 
@@ -67,7 +67,7 @@ function highlightAge(ageGroup) {
 
     // Scroll to relevant bundle based on age
     let targetSection;
-    switch(ageGroup) {
+    switch (ageGroup) {
         case '2-4':
             targetSection = 'Preschool Power Pack';
             break;
