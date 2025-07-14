@@ -1,2 +1,27 @@
-# Redirect www to non-www
+# Netlify redirects file for SEO optimization
+
+# Redirect www to non-www for consistent domain authority
 https://www.kids.yesintelligent.com/* https://kids.yesintelligent.com/:splat 301!
+
+# Common misspellings and variations for better SEO coverage
+/worksheet https://kids.yesintelligent.com/ 301
+/worksheets https://kids.yesintelligent.com/ 301
+/kids-worksheet https://kids.yesintelligent.com/ 301
+/educational-worksheets https://kids.yesintelligent.com/ 301
+/printable-worksheets https://kids.yesintelligent.com/ 301
+/homeschool-worksheets https://kids.yesintelligent.com/ 301
+/math-worksheets https://kids.yesintelligent.com/ 301
+/reading-worksheets https://kids.yesintelligent.com/ 301
+/kindergarten-worksheets https://kids.yesintelligent.com/ 301
+
+# Force HTTPS for security and SEO
+http://kids.yesintelligent.com/* https://kids.yesintelligent.com/:splat 301!
+
+# Security headers for better SEO performance
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com; style-src 'self' 'unsafe-inline';

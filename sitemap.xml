@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
 <url>
   <loc>https://kids.yesintelligent.com/</loc>
-  <lastmod>2025-07-13T01:11:48+00:00</lastmod>
+  <lastmod>2025-07-14T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/assets/og-image.jpg</image:loc>
+    <image:title>KidsWorksheets - 12000+ Premium Educational Worksheets</image:title>
+    <image:caption>Premium educational worksheets for kids K-6 covering math, reading, science and more</image:caption>
+  </image:image>
 </url>
 
 </urlset>
