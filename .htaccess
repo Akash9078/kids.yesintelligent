@@ -43,3 +43,67 @@ RewriteRule ^(.*)$ https://kids.yesintelligent.com/$1 [R=301,L]
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Strategic Redirects for Common Typos and User Intent
+# Math-related typos and variations
+RewriteRule ^math-workshets/?$ /#features [R=301,L]
+RewriteRule ^workshets/?$ /#features [R=301,L]
+RewriteRule ^worksheet/?$ /#features [R=301,L]
+RewriteRule ^maths-worksheets/?$ /#features [R=301,L]
+
+# Reading-related typos
+RewriteRule ^reading-workshets/?$ /#features [R=301,L]
+RewriteRule ^readng-worksheets/?$ /#features [R=301,L]
+
+# Common page variations that users might expect
+RewriteRule ^pricing/?$ /#pricing [R=301,L]
+RewriteRule ^price/?$ /#pricing [R=301,L]
+RewriteRule ^cost/?$ /#pricing [R=301,L]
+RewriteRule ^buy/?$ /#pricing [R=301,L]
+RewriteRule ^purchase/?$ /#pricing [R=301,L]
+RewriteRule ^order/?$ /#pricing [R=301,L]
+
+# Contact variations
+RewriteRule ^contact/?$ /#contact [R=301,L]
+RewriteRule ^contact-us/?$ /#contact [R=301,L]
+RewriteRule ^support/?$ /#contact [R=301,L]
+RewriteRule ^help/?$ /#contact [R=301,L]
+RewriteRule ^faq/?$ /#contact [R=301,L]
+
+# About variations - redirect to testimonials section
+RewriteRule ^about/?$ /#testimonials [R=301,L]
+RewriteRule ^about-us/?$ /#testimonials [R=301,L]
+
+# Grade-specific searches
+RewriteRule ^kindergarten/?$ /#features [R=301,L]
+RewriteRule ^grade-([1-6])/?$ /#features [R=301,L]
+RewriteRule ^k-6/?$ /#features [R=301,L]
+RewriteRule ^elementary/?$ /#features [R=301,L]
+
+# Subject-specific searches
+RewriteRule ^math/?$ /#features [R=301,L]
+RewriteRule ^reading/?$ /#features [R=301,L]
+RewriteRule ^science/?$ /#features [R=301,L]
+RewriteRule ^art/?$ /#features [R=301,L]
+RewriteRule ^english/?$ /#features [R=301,L]
+
+# Common educational terms
+RewriteRule ^homeschool/?$ /#features [R=301,L]
+RewriteRule ^homeschooling/?$ /#features [R=301,L]
+RewriteRule ^education/?$ /#features [R=301,L]
+RewriteRule ^learning/?$ /#features [R=301,L]
+RewriteRule ^printables/?$ /#features [R=301,L]
+
+# Old blog or CMS pages (if you had them)
+RewriteRule ^blog/?.*$ / [R=301,L]
+RewriteRule ^category/?.*$ /#features [R=301,L]
+RewriteRule ^tag/?.*$ /#features [R=301,L]
+RewriteRule ^wp-.*$ / [R=301,L]
+
+# Prevent access to common admin/system files
+RewriteRule ^admin/?.*$ / [R=301,L]
+RewriteRule ^wp-admin/?.*$ / [R=301,L]
+RewriteRule ^login/?$ / [R=301,L]
