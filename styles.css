@@ -513,6 +513,10 @@ body {
     font-size: 1rem;
     border-radius: 0.75rem;
     min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .btn-block {
@@ -1834,6 +1838,22 @@ textarea:focus {
     margin-bottom: 2rem;
 }
 
+/* Additional button fixes for better display */
+.footer-cta-card .btn-primary {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-cta-card .btn-primary:focus {
+    outline: 2px solid #f59e0b;
+    outline-offset: 2px;
+}
+
 .footer-cta-secure {
     color: #e5e7eb;
     font-size: 0.875rem;
@@ -3010,13 +3030,17 @@ body {
     }
     
     .footer-cta-card .btn-large {
-        padding: 0.875rem 1rem;
-        font-size: 0.9rem;
-        line-height: 1.4;
-        white-space: normal;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        white-space: nowrap;
         text-align: center;
-        word-break: break-word;
-        min-height: 52px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .footer-cta-secure {
@@ -3041,10 +3065,14 @@ body {
     }
     
     .footer-cta-card .btn-large {
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.4;
-        white-space: normal;
+        padding: 1rem 1.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        white-space: nowrap;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .footer-cta-stats {

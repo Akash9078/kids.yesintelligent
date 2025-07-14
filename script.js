@@ -419,3 +419,23 @@ const throttledScrollHandler = throttle(() => {
 }, 16); // ~60fps
 
 document.addEventListener('scroll', throttledScrollHandler);
+
+// Purchase button click handler
+function handlePurchaseClick() {
+    try {
+        // Track the click event (optional analytics)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase_click', {
+                'event_category': 'engagement',
+                'event_label': 'footer_cta_button'
+            });
+        }
+        
+        // Open the purchase page
+        window.open('https://yesintelligent.gumroad.com/l/kids-activity-kit', '_blank');
+    } catch (error) {
+        console.error('Error handling purchase click:', error);
+        // Fallback - direct navigation
+        window.location.href = 'https://yesintelligent.gumroad.com/l/kids-activity-kit';
+    }
+}
