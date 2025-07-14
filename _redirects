@@ -1,0 +1,2 @@
+# Redirect www to non-www
+https://www.kids.yesintelligent.com/* https://kids.yesintelligent.com/:splat 301!

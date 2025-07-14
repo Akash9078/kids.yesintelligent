@@ -35,3 +35,11 @@ RewriteRule ^ /%1? [NC,L,R=301]
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
 </IfModule>
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.kids\.yesintelligent\.com [NC]
+RewriteRule ^(.*)$ https://kids.yesintelligent.com/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
