@@ -125,8 +125,16 @@
                 "@id": "https://kids.yesintelligent.com/#product",
                 "name": "12,000+ Premium Kids Worksheets Collection",
                 "description": "Comprehensive collection of educational worksheets covering math, reading, science, and arts for kindergarten to grade 6.",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://pub-978fa224b48646b0b99f042a0935693b.r2.dev/kids_worksheets.webp",
+                    "width": "1200",
+                    "height": "630",
+                    "caption": "Educational worksheets for children showing math, reading, and science activities"
+                },
                 "brand": {
-                    "@id": "https://kids.yesintelligent.com/#organization"
+                    "@type": "Brand",
+                    "name": "KidsWorksheets"
                 },
                 "category": "Educational Materials",
                 "offers": {
@@ -136,7 +144,42 @@
                     "availability": "https://schema.org/InStock",
                     "validFrom": "2025-01-01",
                     "url": "https://yesintelligent.gumroad.com/l/kids-activity-kit",
-                    "priceValidUntil": "2025-12-31"
+                    "priceValidUntil": "2025-12-31",
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": "0.00",
+                            "currency": "USD"
+                        },
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "US"
+                        },
+                        "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "handlingTime": {
+                                "@type": "QuantitativeValue",
+                                "minValue": "0",
+                                "maxValue": "0",
+                                "unitCode": "DAY"
+                            },
+                            "transitTime": {
+                                "@type": "QuantitativeValue",
+                                "minValue": "0",
+                                "maxValue": "0",
+                                "unitCode": "DAY"
+                            }
+                        }
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "US",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+                        "merchantReturnDays": "0",
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    }
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
