@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://n8ndroplet.yesintelligent.com; frame-src https://yesintelligent.gumroad.com;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups">
 
     <!-- Primary Meta Tags -->
     <title>Kids Worksheets - 12,000+ Printables for K-6 | Just $12</title>
@@ -71,12 +79,18 @@
     <link rel="icon" type="image/png" sizes="16x16" 
         href="icons/book-logo.svg">
 
-    <!-- Preload critical resources -->
+    <!-- Preload critical resources for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="dns-prefetch" href="//yesintelligent.gumroad.com">
-    <link rel="dns-prefetch" href="//n8ndroplet.yesintelligent.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://yesintelligent.gumroad.com">
+    <link rel="preconnect" href="https://n8ndroplet.yesintelligent.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="//pub-978fa224b48646b0b99f042a0935693b.r2.dev">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -228,7 +242,7 @@
     <div class="modern-background"></div>
 
     <!-- Header -->
-    <header class="site-header" role="banner">
+    <header class="site-header">
         <div class="header-container">
             <div class="header-brand">
                 <div class="header-logo">
@@ -243,10 +257,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section" role="main">
+    <main class="hero-section">
         <div class="hero-container">
             <div class="hero-offer observer-element">
-                <div class="offer-badge"><img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;"> LIMITED TIME OFFER - 87% OFF TODAY!</div>
+                <div class="offer-badge"><img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> LIMITED TIME OFFER - 87% OFF TODAY!</div>
             </div>
 
             <h1 class="hero-title observer-element">
@@ -256,8 +270,8 @@
 
             <p class="hero-description observer-element">
                 Transform your child's learning with our comprehensive collection of
-                <a href="#features" style="color: #22d3ee; text-decoration: none; font-weight: 600;">educational worksheets</a>. 
-                Perfect for <a href="#faq" style="color: #22d3ee; text-decoration: none; font-weight: 600;">homeschooling</a>,
+                <a href="#features" class="link-highlight">educational worksheets</a>. 
+                Perfect for <a href="#faq" class="link-highlight">homeschooling</a>,
                 homework help, or extra practice. Covering all subjects from
                 <span class="highlight">kindergarten to grade 6</span>.
             </p>
@@ -265,7 +279,7 @@
             <div class="hero-buttons observer-element">
                 <button onclick="window.open('https://yesintelligent.gumroad.com/l/kids-activity-kit', '_blank')"
                     class="btn-primary" aria-label="Purchase instant access for $12">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> Get Instant Access - $12
+                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access - $12
                 </button>
                 <button class="btn-secondary" aria-label="View sample worksheets" onclick="openSampleModal()">
                     View Sample Worksheets →
@@ -273,7 +287,7 @@
             </div>
 
             <!-- Modern Trust Indicators -->
-            <div class="trust-indicators observer-element" role="region" aria-label="Trust indicators">
+            <div class="trust-indicators observer-element" aria-label="Trust indicators">
                 <div class="trust-card">
                     <img src="icons/lightning-fast.svg" alt="Lightning Fast Icon - Quick and easy worksheet downloads" class="trust-icon" width="40" height="40" loading="lazy">
                     <div class="trust-title">Instant Download</div>
@@ -291,10 +305,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Features Section -->
-    <section class="features-section" role="region" aria-labelledby="features-heading">
+    <section class="features-section" aria-labelledby="features-heading">
         <div class="features-background"></div>
         <div class="features-container">
             <div class="features-header observer-element">
@@ -306,9 +320,9 @@
                     Comprehensive educational resources designed to make learning fun and effective
                 </p>
             </div>
-            <div class="features-list" role="list" aria-label="Educational subjects available">
+            <div class="features-list" aria-label="Educational subjects available">
                 <!-- Feature 1 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/math-calculator.svg" alt="Math Calculator Icon - Interactive math worksheets for kids" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Math Worksheets for K-6</h3>
                     <p class="feature-desc">Master numbers with engaging activities. Addition, subtraction,
@@ -316,7 +330,7 @@
                     <div class="feature-link">Explore Math <span aria-hidden="true">→</span></div>
                 </article>
                 <!-- Feature 2 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/reading-book.svg" alt="Reading Book Icon - Educational reading worksheets for children" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Reading & Writing Skills</h3>
                     <p class="feature-desc">Build literacy skills through phonics, comprehension, vocabulary expansion,
@@ -324,7 +338,7 @@
                     <div class="feature-link">Explore Reading <span aria-hidden="true">→</span></div>
                 </article>
                 <!-- Feature 3 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/science-microscope.svg" alt="Science Microscope Icon - Fun science activities and experiments for kids" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Science & Nature Activities</h3>
                     <p class="feature-desc">Discover the wonders of science through hands-on experiments, nature
@@ -332,7 +346,7 @@
                     <div class="feature-link">Explore Science <span aria-hidden="true">→</span></div>
                 </article>
                 <!-- Feature 4 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/art-palette.svg" alt="Art Palette Icon - Creative art and drawing activities for children" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Creative Arts & Crafts</h3>
                     <p class="feature-desc">Unleash creativity with beautiful coloring pages, drawing tutorials, and
@@ -340,7 +354,7 @@
                     <div class="feature-link">Explore Arts <span aria-hidden="true">→</span></div>
                 </article>
                 <!-- Feature 5 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/geography-globe.svg" alt="Geography Globe Icon - World geography and social studies worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Geography & Social Studies</h3>
                     <p class="feature-desc">Explore the world through interactive maps, cultural studies, and important
@@ -348,7 +362,7 @@
                     <div class="feature-link">Explore World <span aria-hidden="true">→</span></div>
                 </article>
                 <!-- Feature 6 -->
-                <article class="feature-card observer-element" role="listitem">
+                <article class="feature-card observer-element">
                     <img src="icons/puzzle-piece.svg" alt="Puzzle Piece Icon - Problem-solving and critical thinking activities" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Educational Puzzles & Games</h3>
                     <p class="feature-desc">Challenge young minds with brain teasers, word searches, crosswords, and
@@ -360,7 +374,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section" role="region" aria-labelledby="pricing-heading">
+    <section class="pricing-section" aria-labelledby="pricing-heading">
         <div class="pricing-background"></div>
         <div class="pricing-background-decor" aria-hidden="true"></div>
         <div class="pricing-container">
@@ -379,7 +393,7 @@
                 <div class="pricing-card-content">
                     <div class="pricing-card-header">
                         <div class="pricing-card-oldprice" itemprop="price" content="97.00">$97.00</div>
-                        <span class="pricing-card-offer" role="banner">87% OFF</span>
+                        <span class="pricing-card-offer">87% OFF</span>
                         <div class="pricing-card-price" itemprop="price" content="12.00">$12</div>
                         <div class="pricing-card-subtitle">
                             <span class="pricing-card-onetime">One-time payment</span> • <span
@@ -388,33 +402,33 @@
                         <meta itemprop="priceCurrency" content="USD">
                         <meta itemprop="availability" content="https://schema.org/InStock">
                     </div>
-                    <ul class="pricing-list" role="list" aria-label="Package includes">
-                        <li class="pricing-list-item" role="listitem">
+                    <ul class="pricing-list" aria-label="Package includes">
+                        <li class="pricing-list-item">
                             <div class="pricing-list-icon" aria-hidden="true">✓</div>
                             <span class="pricing-list-text">12,000+ Premium Worksheets</span>
                         </li>
-                        <li class="pricing-list-item" role="listitem">
+                        <li class="pricing-list-item">
                             <div class="pricing-list-icon" aria-hidden="true">✓</div>
                             <span class="pricing-list-text">Instant PDF Downloads</span>
                         </li>
-                        <li class="pricing-list-item" role="listitem">
+                        <li class="pricing-list-item">
                             <div class="pricing-list-icon" aria-hidden="true">✓</div>
                             <span class="pricing-list-text">Print Unlimited Copies</span>
                         </li>
-                        <li class="pricing-list-item" role="listitem">
+                        <li class="pricing-list-item">
                             <div class="pricing-list-icon" aria-hidden="true">✓</div>
                             <span class="pricing-list-text">Lifetime Access</span>
                         </li>
                     </ul>
                     <button onclick="window.open('https://yesintelligent.gumroad.com/l/kids-activity-kit', '_blank')"
                         class="btn-primary btn-block" aria-label="Purchase instant access now for $12">
-                        <img src="icons/credit-card.svg" alt="Credit Card Icon" width="20" height="20" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> Get Instant Access Now
+                        <img src="icons/credit-card.svg" alt="Credit Card Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access Now
                     </button>
                     <div class="pricing-card-footer">
-                        <p class="pricing-card-secure"><img src="icons/secure-lock.svg" alt="Secure Lock Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> Secure payment • Download starts immediately</p>
+                        <p class="pricing-card-secure"><img src="icons/secure-lock.svg" alt="Secure Lock Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> Secure payment • Download starts immediately</p>
                         <div class="pricing-card-timer">
-                            <img src="icons/time-clock.svg" alt="Time Clock Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
-                            <span style="vertical-align: middle;">Limited time offer expires in 24 hours!</span>
+                            <img src="icons/time-clock.svg" alt="Time Clock Icon" width="24" height="24" loading="lazy" class="icon-inline-6">
+                            <span class="text-middle">Limited time offer expires in 24 hours!</span>
                         </div>
                     </div>
                 </div>
@@ -433,8 +447,8 @@
                     Real stories from families transforming their children's education
                 </p>
             </div>
-            <div class="testimonials-list" role="list" aria-label="Customer testimonials">
-                <article class="testimonial-card observer-element" role="listitem" itemscope
+            <div class="testimonials-list" aria-label="Customer testimonials">
+                <article class="testimonial-card observer-element" itemscope
                     itemtype="https://schema.org/Review">
                     <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="12,000+ Premium Kids Worksheets Collection">
@@ -468,7 +482,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="testimonial-card observer-element" role="listitem" itemscope
+                <article class="testimonial-card observer-element" itemscope
                     itemtype="https://schema.org/Review">
                     <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="12,000+ Premium Kids Worksheets Collection">
@@ -502,7 +516,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="testimonial-card observer-element" role="listitem" itemscope
+                <article class="testimonial-card observer-element" itemscope
                     itemtype="https://schema.org/Review">
                     <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
                         <meta itemprop="name" content="12,000+ Premium Kids Worksheets Collection">
@@ -557,73 +571,73 @@
                 <div class="footer-cta-card">
                     <button onclick="handlePurchaseClick()" class="btn-primary btn-large"
                         aria-label="Purchase instant access for $12">
-                        <img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;"> Yes! Give Me Access Now - $12
+                        <img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> Yes! Give Me Access Now - $12
                     </button>
                     <div class="footer-cta-secure">Secure payment with instant access</div>
                 </div>
                 <div class="footer-cta-stats">
-                    <div class="footer-cta-stat"><img src="icons/secure-lock.svg" alt="SSL Secured Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"><span style="display: inline-block; vertical-align: middle;">SSL Secured</span></div>
-                    <div class="footer-cta-stat"><img src="icons/lightning-fast.svg" alt="Instant Access Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"><span style="display: inline-block; vertical-align: middle;">Instant Access</span></div>
-                    <div class="footer-cta-stat"><img src="icons/achievement-trophy.svg" alt="Happy Families Achievement Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"><span style="display: inline-block; vertical-align: middle;">5,000+ Happy Families</span></div>
+                    <div class="footer-cta-stat"><img src="icons/secure-lock.svg" alt="SSL Secured Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">SSL Secured</span></div>
+                    <div class="footer-cta-stat"><img src="icons/lightning-fast.svg" alt="Instant Access Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">Instant Access</span></div>
+                    <div class="footer-cta-stat"><img src="icons/achievement-trophy.svg" alt="Happy Families Achievement Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">5,000+ Happy Families</span></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section" role="region" aria-labelledby="faq-heading" style="padding: 4rem 0; background: rgba(255,255,255,0.02);">
-        <div class="container" style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
-            <div class="faq-header" style="text-align: center; margin-bottom: 3rem;">
-                <h2 id="faq-heading" style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 0.75rem;">
-                    Frequently Asked <span style="background: linear-gradient(90deg, #22c55e, #3b82f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Questions</span>
+    <section class="faq-section" role="region" aria-labelledby="faq-heading">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2 id="faq-heading" class="faq-title">
+                    Frequently Asked <span class="faq-title-gradient">Questions</span>
                 </h2>
-                <p style="font-size: 1.25rem; color: #e5e7eb; max-width: 32rem; margin: 0 auto;">
+                <p class="faq-description">
                     Everything you need to know about our educational worksheets
                 </p>
             </div>
             
-            <div class="faq-list" style="max-width: 48rem; margin: 0 auto; display: grid; gap: 1.5rem;">
-                <details class="faq-item observer-element" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; padding: 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #fff; font-size: 1.125rem; margin-bottom: 0.75rem; list-style: none;">
-                        <h3 style="display: inline; margin: 0;">What age groups are these worksheets designed for?</h3>
+            <div class="faq-list">
+                <details class="faq-item observer-element">
+                    <summary class="faq-summary">
+                        <h3>What age groups are these worksheets designed for?</h3>
                     </summary>
-                    <p style="color: #e5e7eb; line-height: 1.6; margin: 0; padding-left: 1rem;">
+                    <p class="faq-answer">
                         Our comprehensive collection is specifically designed for children from kindergarten through grade 6 (ages 5-12). Each worksheet is carefully crafted to match the developmental and educational needs of different grade levels.
                     </p>
                 </details>
                 
-                <details class="faq-item observer-element" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; padding: 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #fff; font-size: 1.125rem; margin-bottom: 0.75rem; list-style: none;">
-                        <h3 style="display: inline; margin: 0;">How many worksheets do I get for $12?</h3>
+                <details class="faq-item observer-element">
+                    <summary class="faq-summary">
+                        <h3>How many worksheets do I get for $12?</h3>
                     </summary>
-                    <p style="color: #e5e7eb; line-height: 1.6; margin: 0; padding-left: 1rem;">
+                    <p class="faq-answer">
                         You get instant access to over 12,000 premium educational worksheets covering math, reading, science, arts, geography, and puzzle activities. That's less than $0.001 per worksheet!
                     </p>
                 </details>
                 
-                <details class="faq-item observer-element" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; padding: 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #fff; font-size: 1.125rem; margin-bottom: 0.75rem; list-style: none;">
-                        <h3 style="display: inline; margin: 0;">Can I print these worksheets multiple times?</h3>
+                <details class="faq-item observer-element">
+                    <summary class="faq-summary">
+                        <h3>Can I print these worksheets multiple times?</h3>
                     </summary>
-                    <p style="color: #e5e7eb; line-height: 1.6; margin: 0; padding-left: 1rem;">
+                    <p class="faq-answer">
                         Absolutely! Once you purchase, you have lifetime access and can print unlimited copies for personal use, homeschooling, or classroom activities. Perfect for families with multiple children or teachers.
                     </p>
                 </details>
                 
-                <details class="faq-item observer-element" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; padding: 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #fff; font-size: 1.125rem; margin-bottom: 0.75rem; list-style: none;">
-                        <h3 style="display: inline; margin: 0;">Are these worksheets suitable for homeschooling?</h3>
+                <details class="faq-item observer-element">
+                    <summary class="faq-summary">
+                        <h3>Are these worksheets suitable for homeschooling?</h3>
                     </summary>
-                    <p style="color: #e5e7eb; line-height: 1.6; margin: 0; padding-left: 1rem;">
+                    <p class="faq-answer">
                         Yes! Our worksheets are perfect for homeschooling families. They're organized by subject and grade level, making it easy to supplement your curriculum or provide extra practice in specific areas.
                     </p>
                 </details>
                 
-                <details class="faq-item observer-element" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 1rem; padding: 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #fff; font-size: 1.125rem; margin-bottom: 0.75rem; list-style: none;">
-                        <h3 style="display: inline; margin: 0;">How quickly will I receive the worksheets after purchase?</h3>
+                <details class="faq-item observer-element">
+                    <summary class="faq-summary">
+                        <h3>How quickly will I receive the worksheets after purchase?</h3>
                     </summary>
-                    <p style="color: #e5e7eb; line-height: 1.6; margin: 0; padding-left: 1rem;">
+                    <p class="faq-answer">
                         You'll get instant access! Immediately after your secure payment is processed, you'll receive a download link via email. No waiting, no shipping - just instant educational resources.
                     </p>
                 </details>
@@ -675,24 +689,24 @@
                     <!-- Key Features -->
                     <div class="footer-features">
                         <h4 class="footer-features-title">
-                            <img src="icons/achievement-trophy.svg" alt="Features Icon" class="footer-features-icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;"> Why Choose Us?
+                            <img src="icons/achievement-trophy.svg" alt="Features Icon" class="footer-features-icon" width="24" height="24" loading="lazy" class="icon-inline-8"> Why Choose Us?
                         </h4>
                         <ul class="footer-features-list">
                             <li class="footer-feature">
-                                <img src="icons/lightning-fast.svg" alt="Fast Download Icon" class="footer-feature-icon footer-feature-green" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-                                <span style="vertical-align: middle;">Instant download - ready in seconds</span>
+                                <img src="icons/lightning-fast.svg" alt="Fast Download Icon" class="footer-feature-icon footer-feature-green" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <span class="text-middle">Instant download - ready in seconds</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/target-goal.svg" alt="Expert Design Icon" class="footer-feature-icon footer-feature-blue" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-                                <span style="vertical-align: middle;">Designed by education specialists</span>
+                                <img src="icons/target-goal.svg" alt="Expert Design Icon" class="footer-feature-icon footer-feature-blue" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <span class="text-middle">Designed by education specialists</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/achievement-trophy.svg" alt="All Subjects Icon" class="footer-feature-icon footer-feature-yellow" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-                                <span style="vertical-align: middle;">Covers all major subjects</span>
+                                <img src="icons/achievement-trophy.svg" alt="All Subjects Icon" class="footer-feature-icon footer-feature-yellow" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <span class="text-middle">Covers all major subjects</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/secure-lock.svg" alt="Unlimited Printing Icon" class="footer-feature-icon footer-feature-pink" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-                                <span style="vertical-align: middle;">Print unlimited copies</span>
+                                <img src="icons/secure-lock.svg" alt="Unlimited Printing Icon" class="footer-feature-icon footer-feature-pink" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <span class="text-middle">Print unlimited copies</span>
                             </li>
                         </ul>
                     </div>
@@ -754,7 +768,7 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2025 KidsWorksheets. All rights reserved. Made with <img src="icons/love-heart.svg" alt="Love" width="18" height="18" loading="lazy" style="display: inline; vertical-align: middle;"> for young learners.
+                    © 2025 KidsWorksheets. All rights reserved. Made with <img src="icons/love-heart.svg" alt="Love" width="18" height="18" loading="lazy" class="icon-inline"> for young learners.
                 </p>
                 <div class="footer-links">
                     <button onclick="openPrivacyModal()" class="footer-link">
@@ -788,10 +802,10 @@
                     Get <span class="modal-title-gradient">FREE Sample</span> Worksheets!
                 </h3>
                 <p class="modal-desc">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> <strong class="modal-highlight-yellow">Instant access</strong> to 10 premium worksheets<br>
-                    <img src="icons/book-logo.svg" alt="Educational Content Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;"> <strong class="modal-highlight-blue">Math, Reading & Science</strong> samples included<br>
-                    <img src="icons/target-goal.svg" alt="Learning Goals Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 8px;"> <strong class="modal-highlight-green">See exactly</strong> what your child will be learning<br>
-                    <img src="icons/free-gift.svg" alt="Free Gift Icon" width="24" height="24" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> <strong class="modal-highlight-pink">100% FREE</strong> - no credit card required
+                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-yellow">Instant access</strong> to 10 premium worksheets<br>
+                    <img src="icons/book-logo.svg" alt="Educational Content Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-blue">Math, Reading & Science</strong> samples included<br>
+                    <img src="icons/target-goal.svg" alt="Learning Goals Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-green">See exactly</strong> what your child will be learning<br>
+                    <img src="icons/free-gift.svg" alt="Free Gift Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-pink">100% FREE</strong> - no credit card required
                 </p>
             </div>
 
@@ -822,7 +836,7 @@
                 </div>
 
                 <button type="submit" class="btn-primary btn-block btn-large">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> Send Me FREE Samples Now!
+                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Send Me FREE Samples Now!
                 </button>
 
                 <p class="modal-form-note">
@@ -837,7 +851,7 @@
         <div class="modal-content modal-content-large" onclick="event.stopPropagation()">
             <button onclick="closePrivacyModal()" class="modal-close" aria-label="Close modal">×</button>
             <div class="modal-header">
-                <h3 class="modal-title"><img src="icons/secure-lock.svg" alt="Privacy Lock Icon" width="28" height="28" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 10px;"> Privacy Policy</h3>
+                <h3 class="modal-title"><img src="icons/secure-lock.svg" alt="Privacy Lock Icon" width="28" height="28" loading="lazy" class="icon-inline-10"> Privacy Policy</h3>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
@@ -915,11 +929,11 @@
         <div class="modal-content modal-content-large" onclick="event.stopPropagation()">
             <button onclick="closeRefundModal()" class="modal-close" aria-label="Close modal">×</button>
             <div class="modal-header">
-                <h3 class="modal-title"><img src="icons/credit-card.svg" alt="Credit Card Refund Icon" width="28" height="28" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 10px;"> Refund Policy</h3>
+                <h3 class="modal-title"><img src="icons/credit-card.svg" alt="Credit Card Refund Icon" width="28" height="28" loading="lazy" class="icon-inline-10"> Refund Policy</h3>
             </div>
             <div class="modal-body">
                 <div class="modal-section modal-section-alert">
-                    <div class="modal-section-alert-title"><img src="icons/warning.svg" alt="Warning Icon" width="20" height="20" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> No Refund Policy</div>
+                    <div class="modal-section-alert-title"><img src="icons/warning.svg" alt="Warning Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> No Refund Policy</div>
                     <p>Due to the digital nature of our educational products, all sales are final and no refunds are
                         available.</p>
                 </div>
@@ -952,7 +966,7 @@
                 </div>
 
                 <div class="modal-section-tip">
-                    <div class="modal-section-tip-title"><img src="icons/tip-bulb.svg" alt="Tip Icon" width="20" height="20" loading="lazy" style="display: inline-block; vertical-align: middle; margin-right: 6px;"> Tip</div>
+                    <div class="modal-section-tip-title"><img src="icons/tip-bulb.svg" alt="Tip Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Tip</div>
                     <p>Try our free sample worksheets first to ensure our products meet your needs and expectations!</p>
                 </div>
             </div>
