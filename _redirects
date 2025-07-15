@@ -3,16 +3,74 @@
 # Redirect www to non-www for consistent domain authority
 https://www.kids.yesintelligent.com/* https://kids.yesintelligent.com/:splat 301!
 
-# Common misspellings and variations for better SEO coverage
-/worksheet https://kids.yesintelligent.com/ 301
-/worksheets https://kids.yesintelligent.com/ 301
-/kids-worksheet https://kids.yesintelligent.com/ 301
-/educational-worksheets https://kids.yesintelligent.com/ 301
-/printable-worksheets https://kids.yesintelligent.com/ 301
-/homeschool-worksheets https://kids.yesintelligent.com/ 301
-/math-worksheets https://kids.yesintelligent.com/ 301
-/reading-worksheets https://kids.yesintelligent.com/ 301
-/kindergarten-worksheets https://kids.yesintelligent.com/ 301
+# Enhanced Common misspellings and variations for better SEO coverage
+/worksheet https://kids.yesintelligent.com/#features 301
+/worksheets https://kids.yesintelligent.com/#features 301
+/kids-worksheet https://kids.yesintelligent.com/#features 301
+/educational-worksheets https://kids.yesintelligent.com/#features 301
+/printable-worksheets https://kids.yesintelligent.com/#features 301
+/homeschool-worksheets https://kids.yesintelligent.com/#features 301
+/math-worksheets https://kids.yesintelligent.com/#features 301
+/reading-worksheets https://kids.yesintelligent.com/#features 301
+/kindergarten-worksheets https://kids.yesintelligent.com/#features 301
+
+# Subject-Specific Redirects
+/math https://kids.yesintelligent.com/#features 301
+/mathematics https://kids.yesintelligent.com/#features 301
+/reading https://kids.yesintelligent.com/#features 301
+/literacy https://kids.yesintelligent.com/#features 301
+/science https://kids.yesintelligent.com/#features 301
+/art https://kids.yesintelligent.com/#features 301
+/english https://kids.yesintelligent.com/#features 301
+/language-arts https://kids.yesintelligent.com/#features 301
+
+# Grade-Level Specific Redirects
+/kindergarten https://kids.yesintelligent.com/#features 301
+/preschool https://kids.yesintelligent.com/#features 301
+/grade-1 https://kids.yesintelligent.com/#features 301
+/grade-2 https://kids.yesintelligent.com/#features 301
+/grade-3 https://kids.yesintelligent.com/#features 301
+/grade-4 https://kids.yesintelligent.com/#features 301
+/grade-5 https://kids.yesintelligent.com/#features 301
+/grade-6 https://kids.yesintelligent.com/#features 301
+/elementary https://kids.yesintelligent.com/#features 301
+/primary https://kids.yesintelligent.com/#features 301
+
+# Educational Terms
+/homeschool https://kids.yesintelligent.com/#features 301
+/homeschooling https://kids.yesintelligent.com/#features 301
+/printables https://kids.yesintelligent.com/#features 301
+/activities https://kids.yesintelligent.com/#features 301
+/learning https://kids.yesintelligent.com/#features 301
+/education https://kids.yesintelligent.com/#features 301
+
+# Business Pages
+/pricing https://kids.yesintelligent.com/#pricing 301
+/price https://kids.yesintelligent.com/#pricing 301
+/cost https://kids.yesintelligent.com/#pricing 301
+/buy https://kids.yesintelligent.com/#pricing 301
+/purchase https://kids.yesintelligent.com/#pricing 301
+/order https://kids.yesintelligent.com/#pricing 301
+
+# Support and Contact
+/contact https://kids.yesintelligent.com/#contact 301
+/contact-us https://kids.yesintelligent.com/#contact 301
+/support https://kids.yesintelligent.com/#contact 301
+/help https://kids.yesintelligent.com/#contact 301
+/faq https://kids.yesintelligent.com/#contact 301
+
+# About and Info
+/about https://kids.yesintelligent.com/#testimonials 301
+/about-us https://kids.yesintelligent.com/#testimonials 301
+/testimonials https://kids.yesintelligent.com/#testimonials 301
+/reviews https://kids.yesintelligent.com/#testimonials 301
+
+# Common Typos
+/workshets https://kids.yesintelligent.com/#features 301
+/math-workshets https://kids.yesintelligent.com/#features 301
+/reading-workshets https://kids.yesintelligent.com/#features 301
+/readng-worksheets https://kids.yesintelligent.com/#features 301
+/maths-worksheets https://kids.yesintelligent.com/#features 301
 
 # Force HTTPS for security and SEO
 http://kids.yesintelligent.com/* https://kids.yesintelligent.com/:splat 301!
