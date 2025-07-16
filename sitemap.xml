@@ -4,14 +4,66 @@
 
 <url>
   <loc>https://kids.yesintelligent.com/</loc>
-  <lastmod>2025-07-14T00:00:00+00:00</lastmod>
+  <lastmod>2025-07-16T00:00:00+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
   <image:image>
     <image:loc>https://pub-978fa224b48646b0b99f042a0935693b.r2.dev/kids_worksheets.webp</image:loc>
-    <image:title>KidsWorksheets - 12000+ Premium Educational Worksheets</image:title>
-    <image:caption>Children learning with educational worksheets and activities - Premium educational worksheets for kids K-6 covering math, reading, science and more</image:caption>
+    <image:title>A collage of colorful and engaging educational worksheets for children, featuring math problems, reading exercises, and science diagrams.</image:title>
+    <image:caption>Our comprehensive collection of 12,000+ printable worksheets covers all subjects for grades K-6, making learning fun and effective.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/book-logo.svg</image:loc>
+    <image:title>KidsWorksheets Logo</image:title>
+    <image:caption>An open book representing our commitment to learning and education.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/math-calculator.svg</image:loc>
+    <image:title>Math Worksheets</image:title>
+    <image:caption>Engaging math worksheets covering topics from basic addition to advanced algebra prep.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/reading-book.svg</image:loc>
+    <image:title>Reading &amp; Writing Worksheets</image:title>
+    <image:caption>A wide variety of reading and writing worksheets to improve literacy skills.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/science-microscope.svg</image:loc>
+    <image:title>Science Worksheets</image:title>
+    <image:caption>Hands-on science experiments and activities to spark curiosity.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/art-palette.svg</image:loc>
+    <image:title>Arts &amp; Crafts Worksheets</image:title>
+    <image:caption>Creative arts and crafts worksheets to inspire artistic expression.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/geography-globe.svg</image:loc>
+    <image:title>Geography &amp; Social Studies Worksheets</image:title>
+    <image:caption>Interactive maps and cultural studies to explore the world.</image:caption>
+  </image:image>
+  <image:image>
+    <image:loc>https://kids.yesintelligent.com/icons/puzzle-piece.svg</image:loc>
+    <image:title>Educational Puzzles &amp; Games</image:title>
+    <image:caption>Fun and challenging puzzles to enhance critical thinking skills.</image:caption>
   </image:image>
 </url>
-
+<url>
+  <loc>https://kids.yesintelligent.com/ai-summary.txt</loc>
+  <lastmod>2025-07-16T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://kids.yesintelligent.com/llms.txt</loc>
+  <lastmod>2025-07-16T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://kids.yesintelligent.com/prompt.txt</loc>
+  <lastmod>2025-07-16T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
 </urlset>

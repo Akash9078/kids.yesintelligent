@@ -116,7 +116,7 @@
                 "url": "https://kids.yesintelligent.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://kids.yesintelligent.com/favicon.ico"
+                    "url": "https://kids.yesintelligent.com/icons/book-logo.svg"
                 },
                 "description": "Premium educational worksheets for kids K-6. Math, reading, science & art activities."
             },
@@ -139,33 +139,64 @@
                 "@id": "https://kids.yesintelligent.com/#product",
                 "url": "https://kids.yesintelligent.com/",
                 "name": "12,000+ Premium Kids Worksheets Collection",
-                "description": "Comprehensive collection of educational worksheets covering math, reading, science, and arts for kindergarten to grade 6. Perfect for homeschooling, classroom activities, and homework help.",
+                "description": "Comprehensive collection of 12,000+ educational worksheets covering math, reading, science, and arts for kindergarten to grade 6. Perfect for homeschooling, classroom activities, and homework help.",
                 "sku": "KW-12000-COLLECTION",
-                "gtin": "1234567890123",
+                "gtin": "9781234567890",
                 "mpn": "KidsWorksheets-Collection-2025",
                 "image": {
                     "@type": "ImageObject",
                     "url": "https://pub-978fa224b48646b0b99f042a0935693b.r2.dev/kids_worksheets.webp",
                     "width": "1200",
                     "height": "630",
-                    "caption": "Educational worksheets for children showing math, reading, and science activities"
+                    "caption": "A collage of colorful and engaging educational worksheets for children, featuring math problems, reading exercises, and science diagrams."
                 },
                 "brand": {
                     "@type": "Brand",
                     "name": "KidsWorksheets"
                 },
                 "manufacturer": {
-                    "@type": "Organization",
                     "@id": "https://kids.yesintelligent.com/#organization"
                 },
                 "category": "Educational Materials",
+                "learningResourceType": "Worksheet",
                 "audience": {
                     "@type": "EducationalAudience",
                     "educationalRole": "student",
                     "audienceType": "Children aged 5-12"
                 },
-                "educationalLevel": "Elementary School",
-                "keywords": "worksheets, educational materials, math, reading, science, arts, kindergarten, elementary, homeschool",
+                "educationalLevel": {
+                    "@type": "DefinedTerm",
+                    "name": "Elementary School",
+                    "inDefinedTermSet": "https://www.oercommons.org/oers?f.grade_level=elementary"
+                },
+                "educationalAlignment": [
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "educationalSubject",
+                        "targetName": "Mathematics"
+                    },
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "educationalSubject",
+                        "targetName": "Reading"
+                    },
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "educationalSubject",
+                        "targetName": "Science"
+                    },
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "educationalSubject",
+                        "targetName": "Arts"
+                    },
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "educationalSubject",
+                        "targetName": "Geography"
+                    }
+                ],
+                "keywords": "kids worksheets, printable worksheets, educational worksheets, math worksheets, reading worksheets, science worksheets, homeschool worksheets, kindergarten worksheets, elementary worksheets, children learning materials, educational printables, homework help, study materials, k-6 worksheets, grade 1 worksheets, grade 2 worksheets, preschool activities",
                 "offers": {
                     "@type": "Offer",
                     "price": 12.00,
@@ -175,7 +206,6 @@
                     "url": "https://yesintelligent.gumroad.com/l/kids-activity-kit",
                     "priceValidUntil": "2025-12-31",
                     "seller": {
-                        "@type": "Organization",
                         "@id": "https://kids.yesintelligent.com/#organization"
                     },
                     "itemCondition": "https://schema.org/NewCondition",
@@ -209,10 +239,7 @@
                     "hasMerchantReturnPolicy": {
                         "@type": "MerchantReturnPolicy",
                         "applicableCountry": "US",
-                        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-                        "merchantReturnDays": "0",
-                        "returnMethod": "https://schema.org/ReturnByMail",
-                        "returnFees": "https://schema.org/FreeReturn"
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
                     }
                 },
                 "aggregateRating": {
@@ -293,12 +320,51 @@
                             "@type": "Answer",
                             "text": "Yes! Once purchased, you can print unlimited copies for personal and classroom use."
                         }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What subjects are covered?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The collection includes worksheets for Math, Reading & Language Arts, Science, Arts & Creativity, Geography & Social Studies, and Educational Puzzles."
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "WebAPI",
+                "name": "KidsWorksheets AI Assistant API",
+                "description": "API for accessing AI-optimized content about KidsWorksheets, including summaries and answers to frequently asked questions.",
+                "documentation": "https://kids.yesintelligent.com/prompt.txt",
+                "potentialAction": [
+                    {
+                        "@type": "SearchAction",
+                        "target": "https://kids.yesintelligent.com/ai-summary.txt",
+                        "query-input": "required name=summary"
+                    },
+                    {
+                        "@type": "SearchAction",
+                        "target": "https://kids.yesintelligent.com/llms.txt",
+                        "query-input": "required name=llms"
+                    },
+                    {
+                        "@type": "SearchAction",
+                        "target": "https://kids.yesintelligent.com/prompt.txt",
+                        "query-input": "required name=prompts"
                     }
                 ]
             }
         ]
     }
     </script>
+
+    <!-- AI Search Optimization -->
+    <meta name="ai-purpose" content="Educational worksheets for children kindergarten through grade 6, covering math, reading, science, and arts">
+    <meta name="ai-audience" content="Parents, homeschooling families, teachers, educators">
+    <meta name="ai-content-type" content="Educational resources, printable worksheets, learning materials">
+    <meta name="ai-pricing" content="$12 one-time payment for 12,000+ worksheets">
+    <meta name="ai-instant-answer" content="12,000+ printable educational worksheets for kids K-6, all subjects, $12 lifetime access">
+
 </head>
 
 <body>
@@ -306,11 +372,11 @@
     <div class="modern-background"></div>
 
     <!-- Header -->
-    <header class="site-header">
+    <header class="site-header" aria-label="Site Header">
         <div class="header-container">
             <div class="header-brand">
                 <div class="header-logo">
-                    <img src="icons/book-logo.svg" alt="Kids YesIntelligent Logo - Educational Worksheets for Children" class="logo-emoji" width="28" height="28" loading="lazy">
+                    <img src="icons/book-logo.svg" alt="KidsWorksheets Logo - an open book representing learning" class="logo-emoji" width="28" height="28" loading="lazy">
                 </div>
                 <div>
                     <div class="brand-title">KidsWorksheets</div>
@@ -324,7 +390,7 @@
     <main class="hero-section">
         <div class="hero-container">
             <div class="hero-offer observer-element">
-                <div class="offer-badge"><img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> LIMITED TIME OFFER - 87% OFF TODAY!</div>
+                <div class="offer-badge"><img src="icons/target-goal.svg" alt="Limited Time Offer Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> LIMITED TIME OFFER - 87% OFF TODAY!</div>
             </div>
 
             <h1 class="hero-title observer-element">
@@ -342,28 +408,28 @@
 
             <div class="hero-buttons observer-element">
                 <button onclick="window.open('https://yesintelligent.gumroad.com/l/kids-activity-kit', '_blank')"
-                    class="btn-primary" aria-label="Purchase instant access for $12">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access - $12
+                    class="btn-primary" aria-label="Get Instant Access to 12,000+ worksheets for a one-time payment of $12">
+                    <img src="icons/instant-access.svg" alt="" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access - $12
                 </button>
-                <button class="btn-secondary" aria-label="View sample worksheets" onclick="openSampleModal()">
+                <button class="btn-secondary" aria-label="View free sample worksheets before purchasing" onclick="openSampleModal()">
                     View Sample Worksheets →
                 </button>
             </div>
 
             <!-- Modern Trust Indicators -->
-            <div class="trust-indicators observer-element" aria-label="Trust indicators">
+            <div class="trust-indicators observer-element" aria-label="Trust Indicators: Instant Download, Secure Payment, and 5,000+ Happy Parents">
                 <div class="trust-card">
-                    <img src="icons/lightning-fast.svg" alt="Lightning Fast Icon - Quick and easy worksheet downloads" class="trust-icon" width="40" height="40" loading="lazy">
+                    <img src="icons/lightning-fast.svg" alt="A lightning bolt icon representing fast downloads" class="trust-icon" width="40" height="40" loading="lazy">
                     <div class="trust-title">Instant Download</div>
                     <div class="trust-desc">Ready in seconds</div>
                 </div>
                 <div class="trust-card">
-                    <img src="icons/security-shield.svg" alt="Security Shield Icon - Safe and secure educational content for kids" class="trust-icon" width="40" height="40" loading="lazy">
+                    <img src="icons/security-shield.svg" alt="A shield icon representing secure payments" class="trust-icon" width="40" height="40" loading="lazy">
                     <div class="trust-title">Secure Payment</div>
                     <div class="trust-desc">Safe & protected</div>
                 </div>
                 <div class="trust-card">
-                    <img src="icons/love-heart.svg" alt="Love Heart Icon - Created with love for children's education" class="trust-icon" width="40" height="40" loading="lazy">
+                    <img src="icons/love-heart.svg" alt="A heart icon representing customer satisfaction" class="trust-icon" width="40" height="40" loading="lazy">
                     <div class="trust-title">5,000+ Happy Parents</div>
                     <div class="trust-desc">Join the community</div>
                 </div>
@@ -381,13 +447,13 @@
                     <span class="features-title-gradient">Needs to Excel</span>
                 </h2>
                 <p class="features-desc">
-                    Comprehensive educational resources designed to make learning fun and effective
+                    A comprehensive collection of educational resources designed to make learning fun and effective for children in kindergarten through grade 6.
                 </p>
             </div>
-            <div class="features-list" aria-label="Educational subjects available">
+            <div class="features-list" aria-label="Educational subjects covered in the worksheet collection">
                 <!-- Feature 1 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/math-calculator.svg" alt="Math Calculator Icon - Interactive math worksheets for kids" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/math-calculator.svg" alt="A calculator icon representing math worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Math Worksheets for K-6</h3>
                     <p class="feature-desc">Master numbers with engaging activities. Addition, subtraction,
                         multiplication, fractions, and advanced concepts from kindergarten to grade 6.</p>
@@ -395,7 +461,7 @@
                 </article>
                 <!-- Feature 2 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/reading-book.svg" alt="Reading Book Icon - Educational reading worksheets for children" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/reading-book.svg" alt="An open book icon representing reading and writing worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Reading & Writing Skills</h3>
                     <p class="feature-desc">Build literacy skills through phonics, comprehension, vocabulary expansion,
                         and creative writing exercises tailored for every reading level.</p>
@@ -403,7 +469,7 @@
                 </article>
                 <!-- Feature 3 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/science-microscope.svg" alt="Science Microscope Icon - Fun science activities and experiments for kids" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/science-microscope.svg" alt="A microscope icon representing science worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Science & Nature Activities</h3>
                     <p class="feature-desc">Discover the wonders of science through hands-on experiments, nature
                         studies, and fascinating scientific concepts that spark curiosity.</p>
@@ -411,7 +477,7 @@
                 </article>
                 <!-- Feature 4 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/art-palette.svg" alt="Art Palette Icon - Creative art and drawing activities for children" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/art-palette.svg" alt="An art palette icon representing arts and crafts worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Creative Arts & Crafts</h3>
                     <p class="feature-desc">Unleash creativity with beautiful coloring pages, drawing tutorials, and
                         imaginative craft templates that inspire artistic expression.</p>
@@ -419,7 +485,7 @@
                 </article>
                 <!-- Feature 5 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/geography-globe.svg" alt="Geography Globe Icon - World geography and social studies worksheets" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/geography-globe.svg" alt="A globe icon representing geography and social studies worksheets" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Geography & Social Studies</h3>
                     <p class="feature-desc">Explore the world through interactive maps, cultural studies, and important
                         historical events that shape our understanding.</p>
@@ -427,7 +493,7 @@
                 </article>
                 <!-- Feature 6 -->
                 <article class="feature-card observer-element">
-                    <img src="icons/puzzle-piece.svg" alt="Puzzle Piece Icon - Problem-solving and critical thinking activities" class="feature-icon" width="56" height="56" loading="lazy">
+                    <img src="icons/puzzle-piece.svg" alt="A puzzle piece icon representing educational puzzles and games" class="feature-icon" width="56" height="56" loading="lazy">
                     <h3 class="feature-title">Educational Puzzles & Games</h3>
                     <p class="feature-desc">Challenge young minds with brain teasers, word searches, crosswords, and
                         logic puzzles designed for hours of educational fun.</p>
@@ -448,7 +514,7 @@
                     <span class="pricing-title-gradient">Worksheets Today!</span>
                 </h2>
                 <p class="pricing-desc">
-                    Join thousands of families already transforming their children's education
+                    Join thousands of families already transforming their children's education with our comprehensive worksheet collection.
                 </p>
             </div>
             <div class="pricing-card observer-element" itemscope itemtype="https://schema.org/Offer">
@@ -466,7 +532,7 @@
                         <meta itemprop="priceCurrency" content="USD">
                         <meta itemprop="availability" content="https://schema.org/InStock">
                     </div>
-                    <ul class="pricing-list" aria-label="Package includes">
+                    <ul class="pricing-list" aria-label="What's included in the $12 package">
                         <li class="pricing-list-item">
                             <div class="pricing-list-icon" aria-hidden="true">✓</div>
                             <span class="pricing-list-text">12,000+ Premium Worksheets</span>
@@ -485,13 +551,13 @@
                         </li>
                     </ul>
                     <button onclick="window.open('https://yesintelligent.gumroad.com/l/kids-activity-kit', '_blank')"
-                        class="btn-primary btn-block" aria-label="Purchase instant access now for $12">
-                        <img src="icons/credit-card.svg" alt="Credit Card Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access Now
+                        class="btn-primary btn-block" aria-label="Proceed to secure checkout to purchase the worksheet collection for $12">
+                        <img src="icons/credit-card.svg" alt="" width="20" height="20" loading="lazy" class="icon-inline-6"> Get Instant Access Now
                     </button>
                     <div class="pricing-card-footer">
-                        <p class="pricing-card-secure"><img src="icons/secure-lock.svg" alt="Secure Lock Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> Secure payment • Download starts immediately</p>
+                        <p class="pricing-card-secure"><img src="icons/secure-lock.svg" alt="A lock icon indicating a secure transaction" width="24" height="24" loading="lazy" class="icon-inline-6"> Secure payment • Download starts immediately</p>
                         <div class="pricing-card-timer">
-                            <img src="icons/time-clock.svg" alt="Time Clock Icon" width="24" height="24" loading="lazy" class="icon-inline-6">
+                            <img src="icons/time-clock.svg" alt="A clock icon indicating a limited time offer" width="24" height="24" loading="lazy" class="icon-inline-6">
                             <span class="text-middle">Limited time offer expires in 24 hours!</span>
                         </div>
                     </div>
@@ -508,10 +574,10 @@
                     What <span class="testimonials-title-gradient">Parents</span> Are Saying
                 </h2>
                 <p class="testimonials-desc">
-                    Real stories from families transforming their children's education
+                    Real stories from families who are transforming their children's education with our worksheets.
                 </p>
             </div>
-            <div class="testimonials-list" aria-label="Customer testimonials">
+            <div class="testimonials-list" aria-label="Customer testimonials and reviews">
                 <article class="testimonial-card observer-element" itemscope
                     itemtype="https://schema.org/Review">
                     <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
@@ -520,7 +586,7 @@
                     </div>
                     <div class="testimonial-card-decor yellow" aria-hidden="true"></div>
                     <div class="testimonial-card-content">
-                        <div class="testimonial-rating" role="img" aria-label="5 star rating" itemprop="reviewRating"
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars" itemprop="reviewRating"
                             itemscope itemtype="https://schema.org/Rating">
                             <span class="testimonial-star">⭐</span>
                             <span class="testimonial-star">⭐</span>
@@ -554,7 +620,7 @@
                     </div>
                     <div class="testimonial-card-decor blue" aria-hidden="true"></div>
                     <div class="testimonial-card-content">
-                        <div class="testimonial-rating" role="img" aria-label="5 star rating" itemprop="reviewRating"
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars" itemprop="reviewRating"
                             itemscope itemtype="https://schema.org/Rating">
                             <span class="testimonial-star">⭐</span>
                             <span class="testimonial-star">⭐</span>
@@ -588,7 +654,7 @@
                     </div>
                     <div class="testimonial-card-decor green" aria-hidden="true"></div>
                     <div class="testimonial-card-content">
-                        <div class="testimonial-rating" role="img" aria-label="5 star rating" itemprop="reviewRating"
+                        <div class="testimonial-rating" role="img" aria-label="5 out of 5 stars" itemprop="reviewRating"
                             itemscope itemtype="https://schema.org/Rating">
                             <span class="testimonial-star">⭐</span>
                             <span class="testimonial-star">⭐</span>
@@ -619,30 +685,29 @@
     </section>
 
     <!-- Footer CTA -->
-    <section class="footer-cta-section">
+    <section class="footer-cta-section" aria-labelledby="footer-cta-heading">
         <div class="footer-cta-background"></div>
         <div class="footer-cta-background-decor"></div>
         <div class="footer-cta-container">
             <div class="footer-cta-content observer-element">
-                <h2 class="footer-cta-title">
+                <h2 id="footer-cta-heading" class="footer-cta-title">
                     Don't Wait - Your Child's
                     <span class="footer-cta-title-gradient">Education Matters!</span>
                 </h2>
                 <p class="footer-cta-desc">
-                    Join thousands of parents who are already using our worksheets to boost their children's learning
-                    and confidence.
+                    Join thousands of parents who are already using our worksheets to boost their children's learning and confidence.
                 </p>
                 <div class="footer-cta-card">
                     <button onclick="handlePurchaseClick()" class="btn-primary btn-large"
-                        aria-label="Purchase instant access for $12">
-                        <img src="icons/target-goal.svg" alt="Target Goal Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> Yes! Give Me Access Now - $12
+                        aria-label="Yes, give me instant access to all 12,000+ worksheets for a one-time payment of $12">
+                        <img src="icons/target-goal.svg" alt="" width="24" height="24" loading="lazy" class="icon-inline-8"> Yes! Give Me Access Now - $12
                     </button>
                     <div class="footer-cta-secure">Secure payment with instant access</div>
                 </div>
-                <div class="footer-cta-stats">
-                    <div class="footer-cta-stat"><img src="icons/secure-lock.svg" alt="SSL Secured Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">SSL Secured</span></div>
-                    <div class="footer-cta-stat"><img src="icons/lightning-fast.svg" alt="Instant Access Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">Instant Access</span></div>
-                    <div class="footer-cta-stat"><img src="icons/achievement-trophy.svg" alt="Happy Families Achievement Icon" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">5,000+ Happy Families</span></div>
+                <div class="footer-cta-stats" aria-label="Key Features: SSL Secured, Instant Access, 5,000+ Happy Families">
+                    <div class="footer-cta-stat"><img src="icons/secure-lock.svg" alt="" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">SSL Secured</span></div>
+                    <div class="footer-cta-stat"><img src="icons/lightning-fast.svg" alt="" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">Instant Access</span></div>
+                    <div class="footer-cta-stat"><img src="icons/achievement-trophy.svg" alt="" class="footer-cta-stat-icon" width="24" height="24" loading="lazy" class="icon-inline-6"><span class="text-inline-middle">5,000+ Happy Families</span></div>
                 </div>
             </div>
         </div>
@@ -656,14 +721,14 @@
                     Frequently Asked <span class="faq-title-gradient">Questions</span>
                 </h2>
                 <p class="faq-description">
-                    Everything you need to know about our educational worksheets
+                    Your questions about our 12,000+ educational worksheets, answered.
                 </p>
             </div>
             
             <div class="faq-list">
                 <details class="faq-item observer-element">
                     <summary class="faq-summary">
-                        <h3>What age groups are these worksheets designed for?</h3>
+                        <h3 class="faq-question">What age groups are these worksheets designed for?</h3>
                     </summary>
                     <p class="faq-answer">
                         Our comprehensive collection is specifically designed for children from kindergarten through grade 6 (ages 5-12). Each worksheet is carefully crafted to match the developmental and educational needs of different grade levels.
@@ -672,7 +737,7 @@
                 
                 <details class="faq-item observer-element">
                     <summary class="faq-summary">
-                        <h3>How many worksheets do I get for $12?</h3>
+                        <h3 class="faq-question">How many worksheets do I get for $12?</h3>
                     </summary>
                     <p class="faq-answer">
                         You get instant access to over 12,000 premium educational worksheets covering math, reading, science, arts, geography, and puzzle activities. That's less than $0.001 per worksheet!
@@ -681,7 +746,7 @@
                 
                 <details class="faq-item observer-element">
                     <summary class="faq-summary">
-                        <h3>Can I print these worksheets multiple times?</h3>
+                        <h3 class="faq-question">Can I print these worksheets multiple times?</h3>
                     </summary>
                     <p class="faq-answer">
                         Absolutely! Once you purchase, you have lifetime access and can print unlimited copies for personal use, homeschooling, or classroom activities. Perfect for families with multiple children or teachers.
@@ -690,7 +755,7 @@
                 
                 <details class="faq-item observer-element">
                     <summary class="faq-summary">
-                        <h3>Are these worksheets suitable for homeschooling?</h3>
+                        <h3 class="faq-question">Are these worksheets suitable for homeschooling?</h3>
                     </summary>
                     <p class="faq-answer">
                         Yes! Our worksheets are perfect for homeschooling families. They're organized by subject and grade level, making it easy to supplement your curriculum or provide extra practice in specific areas.
@@ -699,7 +764,7 @@
                 
                 <details class="faq-item observer-element">
                     <summary class="faq-summary">
-                        <h3>How quickly will I receive the worksheets after purchase?</h3>
+                        <h3 class="faq-question">How quickly will I receive the worksheets after purchase?</h3>
                     </summary>
                     <p class="faq-answer">
                         You'll get instant access! Immediately after your secure payment is processed, you'll receive a download link via email. No waiting, no shipping - just instant educational resources.
@@ -717,7 +782,7 @@
                 <div class="footer-brand">
                     <div class="footer-brand-logo">
                         <div class="footer-logo-container">
-                            <img src="icons/book-logo.svg" alt="Kids YesIntelligent Logo - Educational Worksheets for Children" class="footer-logo-emoji" width="28" height="28" loading="lazy">
+                            <img src="icons/book-logo.svg" alt="KidsWorksheets Logo" class="footer-logo-emoji" width="28" height="28" loading="lazy">
                         </div>
                         <div>
                             <span class="footer-brand-title">KidsWorksheets</span>
@@ -731,7 +796,7 @@
                     </p>
 
                     <!-- Quick Stats -->
-                    <div class="footer-stats">
+                    <div class="footer-stats" aria-label="Quick statistics about our worksheet collection">
                         <div class="footer-stat">
                             <div class="footer-stat-value footer-stat-yellow">12,000+</div>
                             <div class="footer-stat-label">Worksheets</div>
@@ -753,23 +818,23 @@
                     <!-- Key Features -->
                     <div class="footer-features">
                         <h4 class="footer-features-title">
-                            <img src="icons/achievement-trophy.svg" alt="Features Icon" class="footer-features-icon" width="24" height="24" loading="lazy" class="icon-inline-8"> Why Choose Us?
+                            <img src="icons/achievement-trophy.svg" alt="" class="footer-features-icon" width="24" height="24" loading="lazy" class="icon-inline-8"> Why Choose Us?
                         </h4>
-                        <ul class="footer-features-list">
+                        <ul class="footer-features-list" aria-label="Key features of our worksheet collection">
                             <li class="footer-feature">
-                                <img src="icons/lightning-fast.svg" alt="Fast Download Icon" class="footer-feature-icon footer-feature-green" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <img src="icons/lightning-fast.svg" alt="" class="footer-feature-icon footer-feature-green" width="24" height="24" loading="lazy" class="icon-inline-8">
                                 <span class="text-middle">Instant download - ready in seconds</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/target-goal.svg" alt="Expert Design Icon" class="footer-feature-icon footer-feature-blue" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <img src="icons/target-goal.svg" alt="" class="footer-feature-icon footer-feature-blue" width="24" height="24" loading="lazy" class="icon-inline-8">
                                 <span class="text-middle">Designed by education specialists</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/achievement-trophy.svg" alt="All Subjects Icon" class="footer-feature-icon footer-feature-yellow" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <img src="icons/achievement-trophy.svg" alt="" class="footer-feature-icon footer-feature-yellow" width="24" height="24" loading="lazy" class="icon-inline-8">
                                 <span class="text-middle">Covers all major subjects</span>
                             </li>
                             <li class="footer-feature">
-                                <img src="icons/secure-lock.svg" alt="Unlimited Printing Icon" class="footer-feature-icon footer-feature-pink" width="24" height="24" loading="lazy" class="icon-inline-8">
+                                <img src="icons/secure-lock.svg" alt="" class="footer-feature-icon footer-feature-pink" width="24" height="24" loading="lazy" class="icon-inline-8">
                                 <span class="text-middle">Print unlimited copies</span>
                             </li>
                         </ul>
@@ -781,13 +846,13 @@
                             <span class="footer-social-icon">🌟</span> Follow Us
                         </h4>
                         <div class="footer-social-links">
-                            <a href="https://pin.it/1jn0OJ6Uc" target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-pinterest" aria-label="Follow us on Pinterest">
+                            <a href="https://pin.it/1jn0OJ6Uc" target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-pinterest" aria-label="Follow us on Pinterest for more educational content and ideas">
                                 <svg class="footer-social-svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378 0 0-.602 2.323-.751 2.897-.271 1.027-1.004 2.306-1.492 3.078C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
                                 </svg>
                                 <span>Pinterest</span>
                             </a>
-                            <a href="https://www.instagram.com/kids_yesintelligent?" target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-instagram" aria-label="Follow us on Instagram">
+                            <a href="https://www.instagram.com/kids_yesintelligent?" target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-instagram" aria-label="Follow us on Instagram for daily learning inspiration">
                                 <svg class="footer-social-svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
@@ -832,7 +897,7 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2025 KidsWorksheets. All rights reserved. Made with <img src="icons/love-heart.svg" alt="Love" width="18" height="18" loading="lazy" class="icon-inline"> for young learners.
+                    © 2025 KidsWorksheets. All rights reserved. Made with <img src="icons/love-heart.svg" alt="love" width="18" height="18" loading="lazy" class="icon-inline"> for young learners.
                 </p>
                 <div class="footer-links">
                     <button onclick="openPrivacyModal()" class="footer-link">
@@ -852,29 +917,29 @@
     </footer>
 
     <!-- Sample Worksheets Modal -->
-    <div id="sampleModal" class="modal" onclick="closeSampleModal(event)">
+    <div id="sampleModal" class="modal" onclick="closeSampleModal(event)" aria-labelledby="sample-modal-title" aria-hidden="true" role="dialog">
         <div class="modal-content" onclick="event.stopPropagation()">
             <!-- Close button -->
-            <button onclick="closeSampleModal()" class="modal-close" aria-label="Close modal">
+            <button onclick="closeSampleModal()" class="modal-close" aria-label="Close sample worksheets modal">
                 ×
             </button>
 
             <!-- Modal Content -->
             <div class="modal-header">
-                <div class="modal-emoji"><img src="icons/free-gift.svg" alt="Free Gift Icon" width="40" height="40" loading="lazy"></div>
-                <h3 class="modal-title">
+                <div class="modal-emoji"><img src="icons/free-gift.svg" alt="" width="40" height="40" loading="lazy"></div>
+                <h3 id="sample-modal-title" class="modal-title">
                     Get <span class="modal-title-gradient">FREE Sample</span> Worksheets!
                 </h3>
                 <p class="modal-desc">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-yellow">Instant access</strong> to 10 premium worksheets<br>
-                    <img src="icons/book-logo.svg" alt="Educational Content Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-blue">Math, Reading & Science</strong> samples included<br>
-                    <img src="icons/target-goal.svg" alt="Learning Goals Icon" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-green">See exactly</strong> what your child will be learning<br>
-                    <img src="icons/free-gift.svg" alt="Free Gift Icon" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-pink">100% FREE</strong> - no credit card required
+                    <img src="icons/instant-access.svg" alt="" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-yellow">Instant access</strong> to 10 premium worksheets<br>
+                    <img src="icons/book-logo.svg" alt="" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-blue">Math, Reading & Science</strong> samples included<br>
+                    <img src="icons/target-goal.svg" alt="" width="24" height="24" loading="lazy" class="icon-inline-8"> <strong class="modal-highlight-green">See exactly</strong> what your child will be learning<br>
+                    <img src="icons/free-gift.svg" alt="" width="24" height="24" loading="lazy" class="icon-inline-6"> <strong class="modal-highlight-pink">100% FREE</strong> - no credit card required
                 </p>
             </div>
 
             <!-- Form -->
-            <form id="sampleForm" class="modal-form" onsubmit="handleSampleSubmit(event)">
+            <form id="sampleForm" class="modal-form" onsubmit="handleSampleSubmit(event)" aria-label="Free sample worksheets sign-up form">
                 <div class="modal-form-field">
                     <label for="parentName" class="modal-form-label">Parent's Name</label>
                     <input type="text" id="parentName" name="parentName" required class="modal-form-input"
@@ -889,7 +954,7 @@
 
                 <div class="modal-form-info">
                     <div class="modal-bonus-content">
-                        <img src="icons/achievement-trophy.svg" alt="Bonus Content Icon" class="modal-bonus-icon" width="28" height="28" loading="lazy">
+                        <img src="icons/achievement-trophy.svg" alt="" class="modal-bonus-icon" width="28" height="28" loading="lazy">
                         <div class="modal-bonus-text">
                             <strong>Bonus:</strong> You'll also receive our weekly newsletter with <strong
                                 class="modal-highlight-yellow">FREE educational tips</strong>, <strong
@@ -900,7 +965,7 @@
                 </div>
 
                 <button type="submit" class="btn-primary btn-block btn-large">
-                    <img src="icons/instant-access.svg" alt="Instant Access Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Send Me FREE Samples Now!
+                    <img src="icons/instant-access.svg" alt="" width="20" height="20" loading="lazy" class="icon-inline-6"> Send Me FREE Samples Now!
                 </button>
 
                 <p class="modal-form-note">
@@ -911,11 +976,11 @@
     </div>
 
     <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="modal" onclick="closePrivacyModal(event)">
+    <div id="privacyModal" class="modal" onclick="closePrivacyModal(event)" aria-labelledby="privacy-modal-title" aria-hidden="true" role="dialog">
         <div class="modal-content modal-content-large" onclick="event.stopPropagation()">
-            <button onclick="closePrivacyModal()" class="modal-close" aria-label="Close modal">×</button>
+            <button onclick="closePrivacyModal()" class="modal-close" aria-label="Close privacy policy modal">×</button>
             <div class="modal-header">
-                <h3 class="modal-title"><img src="icons/secure-lock.svg" alt="Privacy Lock Icon" width="28" height="28" loading="lazy" class="icon-inline-10"> Privacy Policy</h3>
+                <h3 id="privacy-modal-title" class="modal-title"><img src="icons/secure-lock.svg" alt="" width="28" height="28" loading="lazy" class="icon-inline-10"> Privacy Policy</h3>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
@@ -948,11 +1013,11 @@
     </div>
 
     <!-- Terms of Service Modal -->
-    <div id="termsModal" class="modal" onclick="closeTermsModal(event)">
+    <div id="termsModal" class="modal" onclick="closeTermsModal(event)" aria-labelledby="terms-modal-title" aria-hidden="true" role="dialog">
         <div class="modal-content modal-content-large" onclick="event.stopPropagation()">
-            <button onclick="closeTermsModal()" class="modal-close" aria-label="Close modal">×</button>
+            <button onclick="closeTermsModal()" class="modal-close" aria-label="Close terms of service modal">×</button>
             <div class="modal-header">
-                <h3 class="modal-title">📋 Terms of Service</h3>
+                <h3 id="terms-modal-title" class="modal-title">📋 Terms of Service</h3>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
@@ -989,15 +1054,15 @@
     </div>
 
     <!-- Refund Policy Modal -->
-    <div id="refundModal" class="modal" onclick="closeRefundModal(event)">
+    <div id="refundModal" class="modal" onclick="closeRefundModal(event)" aria-labelledby="refund-modal-title" aria-hidden="true" role="dialog">
         <div class="modal-content modal-content-large" onclick="event.stopPropagation()">
-            <button onclick="closeRefundModal()" class="modal-close" aria-label="Close modal">×</button>
+            <button onclick="closeRefundModal()" class="modal-close" aria-label="Close refund policy modal">×</button>
             <div class="modal-header">
-                <h3 class="modal-title"><img src="icons/credit-card.svg" alt="Credit Card Refund Icon" width="28" height="28" loading="lazy" class="icon-inline-10"> Refund Policy</h3>
+                <h3 id="refund-modal-title" class="modal-title"><img src="icons/credit-card.svg" alt="" width="28" height="28" loading="lazy" class="icon-inline-10"> Refund Policy</h3>
             </div>
             <div class="modal-body">
                 <div class="modal-section modal-section-alert">
-                    <div class="modal-section-alert-title"><img src="icons/warning.svg" alt="Warning Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> No Refund Policy</div>
+                    <div class="modal-section-alert-title"><img src="icons/warning.svg" alt="" width="20" height="20" loading="lazy" class="icon-inline-6"> No Refund Policy</div>
                     <p>Due to the digital nature of our educational products, all sales are final and no refunds are
                         available.</p>
                 </div>
@@ -1030,7 +1095,7 @@
                 </div>
 
                 <div class="modal-section-tip">
-                    <div class="modal-section-tip-title"><img src="icons/tip-bulb.svg" alt="Tip Icon" width="20" height="20" loading="lazy" class="icon-inline-6"> Tip</div>
+                    <div class="modal-section-tip-title"><img src="icons/tip-bulb.svg" alt="" width="20" height="20" loading="lazy" class="icon-inline-6"> Tip</div>
                     <p>Try our free sample worksheets first to ensure our products meet your needs and expectations!</p>
                 </div>
             </div>
