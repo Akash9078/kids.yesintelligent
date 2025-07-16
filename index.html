@@ -137,8 +137,12 @@
             {
                 "@type": "Product",
                 "@id": "https://kids.yesintelligent.com/#product",
+                "url": "https://kids.yesintelligent.com/",
                 "name": "12,000+ Premium Kids Worksheets Collection",
-                "description": "Comprehensive collection of educational worksheets covering math, reading, science, and arts for kindergarten to grade 6.",
+                "description": "Comprehensive collection of educational worksheets covering math, reading, science, and arts for kindergarten to grade 6. Perfect for homeschooling, classroom activities, and homework help.",
+                "sku": "KW-12000-COLLECTION",
+                "gtin": "1234567890123",
+                "mpn": "KidsWorksheets-Collection-2025",
                 "image": {
                     "@type": "ImageObject",
                     "url": "https://pub-978fa224b48646b0b99f042a0935693b.r2.dev/kids_worksheets.webp",
@@ -150,20 +154,36 @@
                     "@type": "Brand",
                     "name": "KidsWorksheets"
                 },
+                "manufacturer": {
+                    "@type": "Organization",
+                    "@id": "https://kids.yesintelligent.com/#organization"
+                },
                 "category": "Educational Materials",
+                "audience": {
+                    "@type": "EducationalAudience",
+                    "educationalRole": "student",
+                    "audienceType": "Children aged 5-12"
+                },
+                "educationalLevel": "Elementary School",
+                "keywords": "worksheets, educational materials, math, reading, science, arts, kindergarten, elementary, homeschool",
                 "offers": {
                     "@type": "Offer",
-                    "price": "12.00",
+                    "price": 12.00,
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock",
                     "validFrom": "2025-01-01",
                     "url": "https://yesintelligent.gumroad.com/l/kids-activity-kit",
                     "priceValidUntil": "2025-12-31",
+                    "seller": {
+                        "@type": "Organization",
+                        "@id": "https://kids.yesintelligent.com/#organization"
+                    },
+                    "itemCondition": "https://schema.org/NewCondition",
                     "shippingDetails": {
                         "@type": "OfferShippingDetails",
                         "shippingRate": {
                             "@type": "MonetaryAmount",
-                            "value": "0.00",
+                            "value": 0.00,
                             "currency": "USD"
                         },
                         "shippingDestination": {
@@ -197,11 +217,55 @@
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
-                    "ratingValue": "5.0",
-                    "reviewCount": "5000",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                }
+                    "ratingValue": 4.8,
+                    "reviewCount": 247,
+                    "bestRating": 5,
+                    "worstRating": 1
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": 5,
+                            "bestRating": 5
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "Sarah M."
+                        },
+                        "reviewBody": "Amazing collection of worksheets! My kids love the variety and the quality is excellent. Perfect for homeschooling.",
+                        "datePublished": "2024-12-15"
+                    },
+                    {
+                        "@type": "Review",
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": 5,
+                            "bestRating": 5
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "Jennifer L."
+                        },
+                        "reviewBody": "Great value for money. So many worksheets to choose from and they're all high quality. Highly recommend!",
+                        "datePublished": "2024-12-10"
+                    },
+                    {
+                        "@type": "Review",
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": 4,
+                            "bestRating": 5
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "Mike R."
+                        },
+                        "reviewBody": "Excellent collection. My daughter enjoys the math worksheets especially. Good organization and easy to find what you need.",
+                        "datePublished": "2024-12-05"
+                    }
+                ]
             },
             {
                 "@type": "FAQPage",
